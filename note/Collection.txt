@@ -1,0 +1,24 @@
+array의 크기 length  ex:  for(int i=0 ; i<array.length ; i++){
+arrayList의 크기 size ex:  for(int i=0 ; i<arrayList.size(); i++){
+
+Map계열의 자료구조는 인덱스 대신 키 값으로 데이터를 액세스합니다.
+List계열과 달리 인덱스가 없고, 키와 값만 있습니다. 그리고 키는 유니크 해야 합니다. 
+우리가 값을 관리하고자 한다면 키를 이용해서 값을 관리할 수 있습니다.
+
+Iterator<String> iterator = friends.keySet().iterator(); // 출력에 필요한 반복자
+데이터를 반복적으로 검색하는데 아주 유용한 인터페이스 입니다. 
+참고로 모든 자료구조형은 iterator() 메소드를 지원 하고 있습니다.
+
+List : 순서가 있는 데이터의 집합, 데이터의 중복을 허용   ex. 대기자 명단
+       구현클래스 : ArrayList, LinkedList, Stack, Vector 등
+
+
+set : 순서를 유지하지 않는 데이터의 집합. 데이터의 중복을 허용하지 않음.
+      구현클래스 : HashSet, TreeSet 등
+
+
+map : 키(key)와 값(value)의 쌍(pair)으로 이루어진 데이터의 집합
+       순서는 유지되지 않으며, 키는 중복을 허용하지 않고 값은 중복을 허용
+       구현클래스 : HashMap, HashTable 등
+
+TreeSet에 7,4,9,1,5를 저장하면 트리 구조로 좌측엔 작은 값이 우측엔 큰 값이 저장된다.

@@ -15,3 +15,18 @@ public /* abstract */ 메서드 이름(매개변수 목록); //구현된 메소�
 상수나 메소드를 만들 때 private 접근 제한자는 불가하다
 변수타입으로만 사용되고 구현은 Implement 되는 클래스에서 한다.
 독립적인 프로그래밍이 가능하다.
+
+자바는 다중상속이 불가 
+java는 다중상속이 아닌 ‘다형성(type이 다양하게 존재할 수 있다)’이 존재한다고 이해
+
+단일상속(O)
+public class ChildClass extends ParentClass1 {
+}
+
+다중상속(X)
+public class ChildClass extends ParentClass1, ParentClass2, ParentClass3 {
+}
+
+다중구현(O)
+public class ChildClass implements IFunction1, IFunction2, IFunction3 {
+}
