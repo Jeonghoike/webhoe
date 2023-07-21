@@ -15,5 +15,12 @@ SELECT e.ename, d.dname, e.deptno FROM emp e, dept d
 WHERE e.deptno=d.deptno AND ename=’SCOTT’;
 
 Non-Equi Join : 동일한 컬럼없이 다른 조건을 사용하여 조인
+SALGRADE ex.  SELECT * FROM EMP, SALGRADE WHERE SAL BETWEEN LOSAL AND HISAL
+
 Outer Join : 조인 조건에 만족하지 않는 행도 나타나는 조인
+조인 조건에 만족하지 못하였더라도 해당 로우를 나타내고 싶을 때에 사용하는 것이 외부 조인(Outer Join)입니다.
+W.MGR(+)	M.EMPNO(+)		    (+)기호를 덧붙여 불러올 수 있음
+
 Self Join : 한 테이블 내에서 조인.
+Self Join이란 말 그대로 자기 자신과 조인을 맺는 것. 
+ex. SELECT * FROM EMP W, EMP M WHERE W.MGR=M.EMPNO;
