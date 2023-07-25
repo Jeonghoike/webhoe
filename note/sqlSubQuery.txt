@@ -1,0 +1,20 @@
+Sub Query
+서브 쿼리는 하나의 SQL 문장의 절 안에 포함된 또 하나의  SELECT 문장
+메인쿼리에 포함된 또 하나의 서브 쿼리
+서브쿼리의 종류 
+(1) 단일행 서브쿼리 (서브쿼리의 실행결과가 단일행) : = > >= < <= !=
+	단일 행 서브 쿼리문에서는 이렇게 오직 하나의 로우(행, row)로 반환되는 서브 쿼리의 결과는 
+	메인 쿼리에 보내게 되는데 메인 쿼리의 WHERE 절에서는 단일 행 비교 연산자인 =, >, >=, <, <=, <>를 사용
+	WHERE DEPTNO = (SELECT DEPTNO FROM EMP WHERE ENAME = 'SCOTT')	
+
+	다중열 서브쿼리도 가능하다
+	EX. SCOTT과 JOB이 같고, SCOTT과 부서번호가 같은 사람의 모든 정보를 출력
+	SELECT * FROM EMP 
+		WHERE (JOB, DEPTNO) = (SELECT JOB, DEPTNO FROM EMP WHERE ENAME=’SCOTT’);
+
+
+(2) 다중행 서브쿼리 (서브쿼리의 실행결과가 2행이상) : IN, > ALL, >ANY(SOME), EXISTS
+	IN : 서브쿼리의 결과 중 하나라도 일치하면 참
+	SELECT * FROM EMP 
+		WHERE DEPTNO IN (SELECT DEPTNO FROM EMP WHERE SAL >=3000);
+	
