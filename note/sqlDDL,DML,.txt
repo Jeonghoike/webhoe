@@ -1,0 +1,36 @@
+
+DDL  :    Data Definition Language ; 데이터와 그 구조를 정의
+	CREATE : 데이터 베이스 객체 생성
+		CREATE TABLE 테이블명();
+	NUMBER 	       : Internal Number Format 최고 40자리까지의 숫자를 저장
+	NUMBER(w)    : W는 전체 길이, d는 소수점 이하 자릿수이다
+	NUMBER(w,d)  : W는 전체 길이, d는 소수점 이하 자릿수이다
+
+	VARCHAR2 : Up to 4000 Bytes 가변 길이 문자 데이터
+	DATE	   : BC 4712년 1월 1일~AD 4712년 12월 31일까지의 날짜	   
+	DROP 	   : 데이터 베이스 객체를 삭제
+	ALTER 	   : 기존에 존재하는 데이터베이스 객체를 다시 정의
+	TRUNCATE  : 데이터베이스 객체 내용 삭제
+	
+DML  :   Data Manipulation Language ; 데이터 검색, 수정 등
+	INSERT   : 데이터베이스 객체에 데이터를 입력
+		INSERT INTO 테이블명 VALUES(값1ㅡ 값2, ...);
+
+	DELETE   : 데이터베이스 객체에 데이터를 삭제
+		DELETE FROM 테이블명 [WHERE 조건];
+
+	UPDATE  : 기존에 존재하는 데이터베이스 객체 안의 데이터수정
+		UPDATE 테이블 SET 필드명1=값1, 필드명2=값2, ... [WHERE 조건];
+
+	SELECT   : 데이터베이스 객체로부터 데이터를 검색
+
+제약조건
+
+PRIMARY KEY : 테이블의 각 행을 유일한 값으로 식별하기 위한 필드 (NULL 불가)
+FOREIGN KEY : 테이블의 열이 다른 테이블의 열을 참조
+NOT NULL : NULL을 포함하지 않음
+UNIQUE : 모든 행이 값이 유일. NULL 값은 허용(NULL은 여러개 가능)
+CHECK (조건) : 해당 조건이 만족 (NULL값 허용)
+DEFAULT 기본값 : 기본값 설정(해당 열의 데이터를 입력하지 않으면 원래는 NULL이 들어갈 것을 DEFAULT값으로 입력)
+
+

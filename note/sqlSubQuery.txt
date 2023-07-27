@@ -17,4 +17,12 @@ Sub Query
 	IN : 서브쿼리의 결과 중 하나라도 일치하면 참
 	SELECT * FROM EMP 
 		WHERE DEPTNO IN (SELECT DEPTNO FROM EMP WHERE SAL >=3000);
-	
+
+	ALL : 서브쿼리 결과 모두 만족하면 참
+	 -- ex. 30번 부서직원 모든 급여보다 큰 직원의 모든 필드
+	SELECT * FROM EMP	
+		WHERE 
+	ANY(=SOME) : 서브쿼리 결과가 하나이상 만족하면 참
+	 -- ex. 30번 부서에서의 최소 급여보다 많이 받는 직원의 모든 필드 
+
+	EXISTS : 서브쿼리 결과가 존재하면 참
