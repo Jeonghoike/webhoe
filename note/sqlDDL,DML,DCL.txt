@@ -33,4 +33,13 @@ UNIQUE : 모든 행이 값이 유일. NULL 값은 허용(NULL은 여러개 가�
 CHECK (조건) : 해당 조건이 만족 (NULL값 허용)
 DEFAULT 기본값 : 기본값 설정(해당 열의 데이터를 입력하지 않으면 원래는 NULL이 들어갈 것을 DEFAULT값으로 입력)
 
+DCL : 사용자관리
+
+1. 계정만드는 명령어 CREATE USER 계정 IDENTIFIED BY 비번;
+
+2. 권한 부여 GRANT 권한 TO 계정;
+
+3. 권한 박탈 REVOKE 권한 FROM 계정;
+
+4. 계정 삭제 DROP USER 계정 CASCADE; (계정 삭제는 로그아웃일 경우만 가능)
 
