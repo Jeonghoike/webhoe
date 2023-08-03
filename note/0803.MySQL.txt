@@ -1,0 +1,27 @@
+SQL에 기반을 둔 관계형 DBMS 중 하나
+Oracle, IBM, Infomix 등의 데이터베이스는 고가이지만 MySQL 은 무료(배포판)
+리눅스, 유닉스, 윈도우 등 거의 모든 운영체제에서 사용가능
+처리 속도가 상당히 빠르고 대용량의 데이터 처리 용이
+설치방법이 쉽고 초보자도 익히기 쉬움.
+보안성이 우수
+
+계정 생성 	create user user01 identified by ‘password’;
+
+권한 부여 	grant all on *.* to user01;
+		grant all privileges on *.* to user01; 
+		flush privileges;
+
+권한 박탈 	revoke all on *.* from user01;
+계정 삭제		drop user user01;
+
+데이터 베이스들 리스트		show databases;
+world 데이터 베이스로 들어감	use world;
+현재 들어와 있는 데이터 베이스	select database();
+현재 데이터 베이스안의 테이블들	show tables;
+새로운 데이터 베이스 생성		create database kimdb;
+
+제약조건 중 foreign key 제약조건은 반드시 아래에 명시
+outer join, and &&, or ||, 단일행함수, nvl함수 대신 ifnull사용
+
+컬럼함수 – 오라클 함수와 다소 다른 점
+
