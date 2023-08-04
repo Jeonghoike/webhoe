@@ -54,7 +54,7 @@ public class SelectAllOracle {
 			System.out.println(e.getMessage());
 		}finally {
 			try {
-				if(rs!=null) rs.close();
+				if(rs!=null) rs.close();      // 생성한것 반대로 close
 				if(stmt!=null) stmt.close();
 				if(conn!=null) conn.close();
 			} catch (SQLException e) {
