@@ -3,7 +3,22 @@ JDBC(Java Database Connectivity) 프로그래밍 개념
 자바 패키지의 일부로 자바 프로그램이 데이터 베이스와 연결되어 데이터를 주고 받을 수 있게 해 주는 프로그래밍 인터페이스이다. 
 자바 데이터베이스 프로그래밍 API라고 할 수 있다. 
 
+JDBC프로그래밍 단계와 사용 클래스
+① JDBC 드라이버 로드 (JDBC 드라이버를 로드한다) : Class.forName()을 이용. 드라이버 클래스 로딩(드라이버 필요)
+	                                                     사용 API : Class.ForName()
+② 데이터베이스 연결 (DB에 연결한다) : DriverManager.getConnection()을 이용해 Connection 객체 생성(접속 URL, id, passwd등 필요)
+	                                     사용 API : java.sql.Connection
+③ Statement 생성 (SQL문을 수행할 객체 생성한다) : SQL을 이용해 DB를 조회하거나 다룸. Statement는 SQL 처리 기본 객체
+	                                                     사용 API : java.sql.Statement	java.sql.preparedStatement
+④ SQL문 전송 (SQL문 수행전송하고 결과 받는다): SQL 문 Statement 객체의 executeQuery()(셀렉트문), 
+					  executeUpdate()(INSERT, DELETE, UPDATE) 메소드를 이용, 데이텁이스로 전달해 처리
+	                                                  사용 API : java.sql.Statement.executeQuery()	java.sql.Statement.executeUpdate()
+⑤ 결과 받기 : SQL 실행 결과를 반환 받아야 하는 값이 있따면 ResultSet객체로 받음
+	      사용 API : java.sql.ResultSet
+⑥ 결과 받아 원하는 로직 수행 (수행한 결과를 읽어 원하는 로직을 수행한다 (필요할 때까지 반복)
 
+⑦ 연결 해제 ( DB 연결을 끊는다) : 사용한 자원을 반납함
+ 		                   사용 API : java.sql.Connection.close()
 
 
 1. 요구사항 확립 후 exERD(DB설계)
