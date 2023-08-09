@@ -1,0 +1,12 @@
+package com.lec.ex2person_dtoDao;
+
+public class PersonDaoTest {
+	public static void main(String[] args) {
+		PersonDao dao = PersonDao.getInsance();
+		System.out.println("직업명들 : " + dao.jnameList());
+		System.out.println("1. 기능 insert 테스트");
+		PersonDto dto = new PersonDto("홍홍홍", "배우", 80, 79, 90);
+		int result = dao.insertPerson(dto);
+		//System.out.println(result == PersonDto.SUCCESS? "입력성공":"입력실패");
+	}
+}

@@ -1,0 +1,27 @@
+package com.lec.ex3supermarket;
+
+import java.util.ArrayList;
+
+public class CustomerDaoTest {
+	public static void main(String[] args) {
+		CustomerDao dao = CustomerDao.getInstance();
+		int result;
+		ArrayList<CustomerDto> customers;
+//		System.out.println("1. 회원가입 테스트");
+//		String ctel = "010-4444-5555"; String cname = "허길동";
+//		result = dao.insertCustomer(ctel, cname);
+//		System.out.println(result == CustomerDao.SUCCESS ? 
+//								cname + "님 회원가입 감사. 포인트 1000점 부여": cname + "님 회원가입 실패입니다");
+		System.out.println("2. 정화번호 검색 테스트");
+		String searchTel = "8888";
+		customers = dao.ctelGetCustomers(searchTel);
+		if(customers.isEmpty()) {
+			System.out.println(searchTel + "전화번호로 검색된 고객이 없습니다");
+		}else {
+			System.out.println("아이디\t핸드폰번호\t이름\t포인트\t구매누적액\t고객레벨\t레벨업을 위한 추천 구매액");
+			for(CustomerDto customer : customers) {
+				System.out.println(customer);
+			}
+		}
+	}
+}

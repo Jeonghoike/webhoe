@@ -1,0 +1,45 @@
+package com.lec.ex1person;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class PersonMng {
+	public static void main(String[] args) {
+		String driver = "oracle.jdbc.driver.OracleDriver";
+		String url = "jdbc:oracle:thin:@127.0.0.1:1521:xe";
+		Connection        conn  = null;
+		Statement         stmt  = null; // 직업명들
+		PreparedStatement pstmt = null; // 1번, 2번 기능
+		ResultSet         rs    = null;
+		Scanner scanner = new Scanner(System.in);
+		String fn, sql;
+		ArrayList<String> jobs = new ArrayList<String>(); // DB에 있는 직업명들 add
+		try {
+			sql = "SELECT JNAME FROM JOB";
+			Class.forName(driver); // (1)
+			conn = DriverManager.getConnection(url, "scott", "tiger"); // (2)
+			stmt = conn.createStatement(); // (3)
+			rs   = stmt.executeQuery(sql); // (4) + (5)
+			while(rs.next()) { // (6)
+				jobs.add(rs.getString("jname"));
+			}
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		} finally {
+			try {
+				if(rs!=null) rs.close();
+				if(stmt!=null) stmt.close();
+				if(conn!= null) conn.close();
+			} catch (SQLException e) {
+				System.out.println(e.getMessage());
+			}
+		} // try-catch-finally
+		System.out.println("db에 있는 직업명들 : " + jobs);
+	}
+}

@@ -1,0 +1,16 @@
+package com.lec.ex4update;
+
+import java.sql.Connection;
+import java.sql.Statement;
+import java.util.Scanner;
+
+// 수정할 부서번호를 받아 존재여부를 확인 후, 부서명, 근무지를 입력박아 update
+public class UpdateDept2 {
+	public static void main(String[] args) {
+		String driver = "oracle.jdbc.driver.OracleDriver";
+		String url    = "jdbc:oracle:thin:@localhost:1521:xe";
+		Connection conn = null;
+		Statement stmt  = null;
+		Scanner scanner = new Scanner(System.in);
+	}
+}

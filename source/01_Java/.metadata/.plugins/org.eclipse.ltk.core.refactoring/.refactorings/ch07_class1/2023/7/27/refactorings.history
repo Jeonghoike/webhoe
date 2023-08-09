@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;Account.java&apos; to &apos;ch09_inheritance/src/com.lec.ex11_account&apos;&#x0D;&#x0A;- Original project: &apos;ch07_class1&apos;&#x0D;&#x0A;- Destination element: &apos;ch09_inheritance/src/com.lec.ex11_account&apos;&#x0D;&#x0A;- Original element: &apos;com.lec.ex5_account.Account.java&apos;" description="Copy compilation unit" destination="=ch09_inheritance/src&lt;com.lec.ex11_account" element1="/src&lt;com.lec.ex5_account{Account.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1688609863497" units="1" version="1.0"/>
+</session>

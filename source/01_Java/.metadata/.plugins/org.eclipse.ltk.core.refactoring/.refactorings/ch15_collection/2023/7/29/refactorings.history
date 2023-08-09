@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.lec.ex_set.Ex02_itertatorEx&apos; to &apos;Ex02_iteratorEx&apos;&#x0D;&#x0A;- Original project: &apos;ch15_collection&apos;&#x0D;&#x0A;- Original element: &apos;com.lec.ex_set.Ex02_itertatorEx&apos;&#x0D;&#x0A;- Renamed element: &apos;com.lec.ex_set.Ex02_iteratorEx&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Ex02_itertatorEx&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;com.lec.ex_set{Ex02_itertatorEx.java[Ex02_itertatorEx" matchStrategy="1" name="Ex02_iteratorEx" qualified="false" references="true" similarDeclarations="false" stamp="1689561878280" textual="false" version="1.0"/>
+</session>
