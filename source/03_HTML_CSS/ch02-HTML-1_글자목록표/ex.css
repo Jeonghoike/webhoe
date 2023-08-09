@@ -1,0 +1,18 @@
+﻿table {
+    background-color: red;
+}
+
+tr {
+    background-color: yellow;
+}
+
+tr:hover { /*마우스 커서 가져다 놓으면 색이 바뀜*/
+    background-color: lightgreen; 
+}
+
+caption {
+    background-color: lightyellow;
+}
+td {
+    text-align:  center;
+}
