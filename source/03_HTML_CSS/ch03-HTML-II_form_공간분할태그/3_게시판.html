@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        table{
+            border-collapse:collapse; /* tr border 주기 위해 */
+        }
+        tr{
+            border-top : 1px solid green;
+            border-bottom : 1px solid green;
+        }
+        td { padding : 5px 10px; /* 위 우 하 좌*/}
+    </style>
+    <script>
+        function chk() {
+            // submit 안일어나는 조건 : frm.title.value==''이거나 frm.writer.value는 2글자 미만
+            if (!frm.title.value.trim()) { // "", 0은 false
+                alert("제목은 필수입력 사항입니다");
+                frm.title.value = "";
+                frm.title.focus(); // frm.title에 포커스시킴(커서가 깜박깜박)
+                return false;
+            } else if (frm.writer.value.length < 2) {
+                alert('작성자명은 2글자 이상 입력하세요');
+                frm.writer.focus();
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <form action="" name="frm" onsubmit="return chk()">
+        <table>
+            <caption><h3>게시판</h3></caption>
+            <tr>
+                <td>제 목</td>
+                <td><input type="text" name="title" size="30" /></td>
+            </tr>
+            <tr>
+                <td>작성자</td>
+                <td><input type="text" name="writer" size="30" /></td>
+            </tr>
+            <tr>
+                <td>본문</td>
+                <td>
+                    <textarea name="content" cols="32" rows="5"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>첨부파일</td>
+                <td><input type="file" name="filename" /></td>
+            </tr>
+            <tr>
+                <th colspan="2">
+                    <input type="submit" value="입력" />
+                    <input type="reset" value="취소" />
+                </th>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

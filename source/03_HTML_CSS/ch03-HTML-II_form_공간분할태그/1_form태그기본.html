@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        td, th {
+            padding: 3px; /* 안여백 위, 우, 하, 좌*/
+        }
+    </style>
+</head>
+<body>
+    <!-- form 태그 밖의 input은 전달 불가. form태그의 method는 기본 get방식-->
+    <form action="http://www.daum.net" method="get">
+        <table>
+            <tr>
+                <td>아 이 디</td>
+                <td><input type="text" name="uid" /></td>
+            </tr>
+            <tr>
+                <td>비밀번호</td>
+                <td><input type="password" name="upw" /></td>
+            </tr>
+            <tr>
+                <th colspan="2">
+                    <input type="submit" value="로그인" />
+                </th>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

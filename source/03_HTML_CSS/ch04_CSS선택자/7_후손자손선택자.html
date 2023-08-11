@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        #wrap{
+            width:600px; margin:0 auto;
+            border:1px solid gray;
+        }
+        #wrap > #header{ /* 자손선택자 */
+            overflow:hidden;
+        }
+        #wrap #header .logo{ /* 후손선택자 : space */
+            float:left;
+            padding:10px 30px 10px 150px /* 상 우 하 좌*/
+        }
+        #wrap .title{
+            float:left;
+            padding: 20px 150px 10px 30px
+        }
+        div p{ /* 후손선택자(자손포함) */
+            font-size: 20px;
+        }
+        div > p{ /* 자손선택자 */
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <div class="logo">
+                <h1>LOGO</h1>
+            </div>
+            <div class="title">
+                <h2>00 주식회사</h2>
+            </div>
+        </div><!-- #header -->
+        <div id="content">
+            <p>
+                아이들의 헤는 이름과, 당신은 릴케 아름다운 딴은 듯합니다. 패, 벌레는 했던 시인의 쓸쓸함과 까닭이요, 버리었습니다. 
+                동경과 풀이 헤일 봅니다. 까닭이요, 어머님, 어머니 노루, 이국 버리었습니다. 
+                같이 비둘기, 밤을 풀이 시인의 않은 버리었습니다. 못 가을로 새겨지는 비둘기, 자랑처럼 슬퍼하는 이름을 별에도 이제 봅니다.
+                밤을 못 한 하나에 하나 멀듯이, 이름을 이런 까닭입니다. 걱정도 시인의 내일 하나에 시와 버리었습니다. 
+                이네들은 우는 많은 하늘에는 사랑과 풀이 강아지, 소학교 보고, 버리었습니다. 한 이국 때 까닭입니다. 
+                다 별들을 라이너 있습니다.
+            </p>
+            <ul>
+                <li><p>별 별 그러나 하늘에는 이름자 멀듯이, 써 위에 잠, 있습니다.</p></li>
+                <li><p>별 별 그러나 하늘에는 이름자 멀듯이, 써 위에 잠, 있습니다.</p></li>
+                <li><p>별 별 그러나 하늘에는 이름자 멀듯이, 써 위에 잠, 있습니다.</p></li>
+            </ul>
+        </div><!-- #content -->
+        <div id="footer">
+            <p>서울시 서대문구 대현동</p>
+        </div>
+    </div>
+</body>
+</html>
