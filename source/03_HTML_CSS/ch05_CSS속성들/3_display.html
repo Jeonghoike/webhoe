@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        div{width:100px; height:100px; border:1px solid black; font-weight:bold;}
+        /* display 속성에 들어갈 수 있는 값 : block, inline, inline-block, none */
+        div:nth-child(1){background-color:red;}
+        div:nth-child(2){background-color:green; display:block; margin:10px;}
+        div:nth-child(3){background-color:blue; display:block;}
+        div:nth-child(4){
+            background-color:yellow; display:inline; margin:20px;
+            /* inline 속성 : width, height 무시, 여백도 옆여백 유효, 위 아래 여백은 무시 */
+        } 
+        div:nth-child(5){
+            display:none; /* 안보이게(공간도 안보임) */
+        }
+        div:nth-child(6){
+            background-color:red; display:inline-block; /* height, width, margin 유효 */
+        }
+        div:nth-child(7){
+            background-color:green; display:inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div>contnet1</div>
+    <div>contnet2</div>
+    <div>contnet3</div>
+    <div>contnet4</div>
+    <div>contnet5</div>
+    <div>contnet6</div><div>contnet7</div>
+    <div>contnet8</div>
+</body>
+</html>

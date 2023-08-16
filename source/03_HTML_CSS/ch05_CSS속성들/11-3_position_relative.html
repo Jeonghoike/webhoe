@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        div{width:100px; height:100px; border:1px solid gray;}
+        div:nth-child(1){
+            position:relative; /* 상대좌표(원래 있을 위치에서 top과 left이동) */
+            top:50px; left:50px;
+        }
+        div:nth-child(2){
+            position:relative;
+            top:60px; left:50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="red">RED</div>
+    <div id="yellow">yellow</div>
+</body>
+</html>

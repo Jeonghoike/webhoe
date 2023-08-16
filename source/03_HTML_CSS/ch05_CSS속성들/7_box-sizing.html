@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        /* * * 페이지 초기화 * * */
+        *{margin:0; padding:0;}
+        li{list-style:none;}
+        a{text-decoration:none; color:black;}
+        div:nth-child(1), div:nth-child(2), div:nth-child(3){ /* 110*110 필요 */
+            width:100px; height:100px;
+            border:5px solid black;
+        }
+        div:nth-child(1){background-color:yellow;}
+        div:nth-child(2){
+            background-color:green; 
+            box-sizing:border-box; /* border를 width에 포함시킴 width는 90에 border 5*/
+        }
+        div:last-child{
+            /*width:600px; margin:0 auto;*/
+        }
+        div ul{
+            overflow:hidden; /* 수평 배치 태그의 부모단 */
+        }
+        div ul li{ /* 수평으로 배치하고자 하는 태그 */
+            float:left;
+            width:30%;
+            margin:1.5%;
+            border:1px solid red;
+            box-sizing:border-box;
+            text-align:center;
+            padding:10px 0;
+        }
+        div ul li a{
+            display:block;
+        }
+    </style>
+</head>
+<body>
+    <div>1111</div><div>2222</div><div>3333</div>
+    <div>
+        <ul>
+            <li><a href="#m1">menu1</a></li>
+            <li><a href="#m2">menu2</a></li>
+            <li><a href="#m3">menu3</a></li>
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        *{margin:0; padding:0;}
+        div{width:200px; height:200px; font-weight:bold;}
+        div#content0{background-color:red;}
+        div#content1{background-color:green; padding:20px;} /* 240*240 필요 */
+        div#content2{background-color:blue; border:5px solid black;} /* 210* 210 필요 */
+        div#content3{background-color:yellow; margin:20px;} /* 240*240 필요 */
+        div#content4{ /* (200 + 40 + 40 + 4) * (200 + 40 + 40 + 4) 필요*/
+            background-color:pink;
+            padding:20px; 
+            margin:20px; 
+            border:2px solid red;
+        } 
+    </style>
+</head>
+<body>
+    <div id="content0">200*200</div>
+    <div id="content1">200*200<br />(padding만)</div>
+    <div id="content2">200*200<br />(border만)</div>
+    <div id="content3">200*200<br />(margin만)</div>
+    <div id="content4">200*200<br />(margin,padding,border)</div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        /* url()함수의 용도 : 로컬폰트 지정. 백그라운드 이미지를 지정할 때 */
+        @font-face { /* 로컬 폰트 설정*/
+            font-family: 'coCOF';
+            src: url('ch05/나눔손글씨_코코체.ttf');
+        }
+        *{font-family:coCOF;}
+        #wrap{
+            width:600px; margin:10px auto;
+            border:1px solid gray;
+            height:400px;
+        }
+        #wrap #content{ /* 블록형 태그는 width지정이 없으면 부모의 width, height 지정이 없으면 필요한 만큼 */
+            width:80%; height:100%; margin:0 auto; /* 부모의 % */
+            border:1px solid gray;
+            /*background-image : url('ch05/sulhyun.jpg');*/ /* 400*326 */
+            /*background-repeat: no-repeat;
+            background-position: center;*/
+            background: url('ch05/sulhyun.jpg') center no-repeat;
+            background-size:120%; /* 가로사이즈 기준으로 120% */
+            font-size:3em;
+            text-align:center;
+            color:yellow;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="content">설현도 내일 쉴까?</div>
+    </div>
+</body>
+</html>
