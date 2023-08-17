@@ -1,0 +1,11 @@
+CSS3 단위 : CSS3에서 자주 사용되는 단위들
+font-size : 0.7em; 원래 폰트 사이즈의 0.7배(em) 크기
+font-size : 100%; 문자의 경우 원래 사이즈의 몇% / font-size외 width, height, padding, margin 등의 경우 : 부모의 몇 %
+display : block; display속성을 block으로 수정하면 block형 태그로 전환
+display속성에 들어갈 수 있는 값 :  block, inline, inline-block, none
+inline 속성 : width, height 무시, 여백도 옆여백 유효, 위 아래 여백은 무시
+
+url()함수의 용도 : 로컬폰트 지정. 백그라운드 이미지를 저장할때
+
+
+

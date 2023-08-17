@@ -103,12 +103,12 @@ header .lnb ul li{
     float:left;
  }
 /* * * * * #content .section2 * * * * */
+#content .section2{
+    border:1px solid gray;
+}
 #content .section2 ul{
     width:1000px; margin:0 auto;
     overflow:hidden;
-}
-#content .hit_product{
-    border:1px solid red;
 }
 #content .section2 .hit_product ul li{
     width:242px; margin:3px; 
@@ -136,15 +136,13 @@ footer .office_address,
 footer .shopping_info
 {
     float:left;
-    width:331px; 
+    width:331px; margin:0 0 2px 0;
     height:100px;
     border:1px solid gray;
- 
 }
- 
 footer .copyright{
     clear:both;
-    width:1000px; margin:0 auto;
+    width:1000px;
     height:30px; line-height:30px;
     text-align:center;
     background-color:black;

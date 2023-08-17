@@ -1,0 +1,88 @@
+﻿*{margin:0; padding:0;}
+a{text-decoration:none; color:black; display:block;}
+li{list-style:none;}
+/* header */
+nav {
+    width:1000px; margin:20px auto;
+    overflow:hidden;
+}
+nav ul li{
+    width:85px; 
+    margin:10px; 
+    padding:5px 10px;
+}
+nav #nav_left ul li{
+    float:left;
+}
+nav #nav_left ul li:first-child{
+    border:1px solid gray;
+    background-color:#FDEADA;
+}
+nav #nav_right ul li{
+    float:right;
+}
+/* content */
+#content {
+    width: 1000px;
+    margin: 20px auto;
+    overflow: hidden;
+}
+#content #title{
+    border-bottom: 1px solid lightgray;
+    padding:10px;
+    margin-bottom:10px;
+}
+#content #lnb{
+    float:left;
+    width:180px;
+    height:200px;
+    border:1px solid gray;
+}
+#content #lnb ul li{
+    line-height:30px;
+    padding:2px 30px;
+    border:1px solid gray;
+    font-size:0.9em;
+}
+#content #lnb ul li:nth-child(4){
+    font-weight:bold;
+    background-color:#FDEADA;
+}
+#content #my_content{
+    width:750px; 
+    border:1px solid gray;
+    float:left;
+    margin-left:30px;
+    margin-right:30px;
+}
+#content #sub_title{
+    border-bottom:1px solid gray;
+    height:30px;
+    line-height:30px;
+    text-align:left;
+    padding-left:5px;
+}
+#content #modify {
+   width:70%;
+   margin:30px auto;
+}#content #my_content #modify table td{
+   padding:3px;
+}
+ #content #my_content #modify table input[type='text']{
+  width: 90%; height:25px;
+  border:1px solid gray;
+}
+#content #my_content #modify table input[type='submit']{
+  padding:2px 10px;
+}
+#content #my_content #modify table tr:last-child td {
+  text-align: center;
+}
+footer {
+  clear:both;
+  background-color: #FDEADA;
+  border:1px solid gray;
+  height:30px;
+  line-height:30px;
+  text-align:center;
+}

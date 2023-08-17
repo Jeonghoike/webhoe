@@ -1,0 +1,151 @@
+﻿/* * * 폰트설정 * * */
+@font-face {
+    font-family:'Amarante-Regular';
+    src: url('../font/Amarante-Regular.ttf');
+}
+/* * * 페이지 초기화 * * */
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Amarante-Regular';
+}
+a{
+    text-decoration:none;
+    color:black;
+}
+li{list-style:none;}
+/* * * header #header_nav (.gnb, .survivalFootball) * * */
+header #header_nav{
+    min-width:915px;
+    background-color:#2d1152;
+    overflow:hidden;
+    height:25px;
+    line-height:25px;
+}
+header #header_nav .gnb ul li{
+    float:left;
+    width:60px;
+    text-align:center;
+}
+header #header_nav .gnb ul li a{
+    color:white;
+}
+header #header_nav .survivalFootball p{
+    float:right; margin-right:10px;
+    color:white;
+}
+header #header_nav .survivalFootball img{
+    height:14px; 
+}
+/* * * header #header_info* * */
+header #header_info{
+    width:1000px; margin:0 auto;
+    overflow:hidden;
+}
+header #header_info .logo{
+    margin: 10px 20px;
+    float:left;
+}
+header #header_info .search input{
+    width:400px; margin:20px auto;
+    height:25px;
+    font-size:20px;
+    padding:5px;
+    outline:0;
+    border-color:#3488d9;
+    float:left;
+}
+header #header_info .search input.btn_search{
+    background:url('../img/search_btn.png') no-repeat;
+    width:124px; height:37px;
+    margin:20px auto;
+    border:0;
+    color:white;
+    float:left;
+}
+header #header_info .service ul li {
+    margin:30px 15px 0 15px;
+    float:left;
+}
+/*****content*****/
+#content{
+    width:1000px; margin:0 auto;
+    overflow:hidden;
+}
+/*****content main_menu*****/
+#content #main_menu {
+    width: 155px; float:left;
+}
+#content #main_menu ul li{
+    margin:20px auto;
+    text-align:center;
+}
+/*****content main*****/
+#content #main{
+    float:left;
+}
+#content #main .main_big_banner{
+    width:600px; margin:1px;
+    height:300px;
+    border:1px solid gray;
+}
+#content #main .main_slide_banner{
+    width:600px; margin:1px;
+    height:150px;
+    border:1px solid gray;
+}
+#content #main .sub_menu{
+     width:600px; margin: 1px;
+     height:50px; line-height:50px;
+     border:1px solid gray;
+     background-color:#500095;
+ }
+ #content #main .sub_menu ul li{
+     float:left;
+     width:16.6%;
+     text-align:center;
+ }
+ #content #main ul li a{
+     color:white;
+ }
+ #content #main .main_topic{
+     width:600px; margin:1px;
+     height:100px;
+     border:1px solid gray;
+ }
+ #content #main_banner{
+     float:left;
+ }
+ #content #main_banner .hit_search_word, #main_banner .ad1{
+     width:230px; margin :1px 2px;
+     height:100px;
+     border:1px solid gray;
+ }
+ #content #main_banner .ad2, .ad3{
+     width:230px; margin:1px 2px;
+     height:150px;
+     border:1px solid gray;
+ }
+ #content #main_banner .ad4{
+     width: 230px; margin:1px 2px;
+     height:200px;
+     border:1px solid gray;
+ }
+ footer{
+     width:1000px; margin:0 auto 2px;
+     border:1px solid gray;
+     height:100px;
+ }
+ footer ul{
+     overflow:hidden;
+ }
+ footer ul li{
+     float:left;
+ }
+ footer ul li:first-child{
+     margin:20px 50px 20px 150px;
+ }
+ footer ul li:last-child{
+     margin:15px 0;
+ }
+ 
