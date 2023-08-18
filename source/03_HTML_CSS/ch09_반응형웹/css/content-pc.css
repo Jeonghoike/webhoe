@@ -1,0 +1,7 @@
+﻿/* css/content-pc.css : #content(pc화면용) */
+#wrap #content {
+    background-color:darkgreen;
+    color:white;
+    padding:30px 10px; 
+    text-align:justify;
+}

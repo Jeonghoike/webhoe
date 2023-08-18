@@ -1,0 +1,259 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0
+          maximum-scale=2.0, minimum-scale=0.7, user-scalable=yes" />
+    <!-- 모바일 웹브라우저의 화면 설정과 관련된 정보를 제공하기위해 뷰포트 meta 태그 사용 -->
+    <title></title>
+    <style>
+        /* * * 페이지 초기화 * * */
+        *{
+            margin:0; padding:0;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+        }
+        li{list-style:none;}
+        a{text-decoration:none; display:block;}
+        /* * * header * * */
+        header{
+            height:100px; background-color:#ea8f00;
+        }
+        /* * * header #logo_wrap * * */
+        header #logo_wrap{
+            height:50px; line-height:50px; text-align:center;
+            position:relative;
+        }
+        header #logo_wrap img.menu{
+            position:absolute; left:10px; top:0;
+        }
+        header #logo_wrap img.myinfo{
+            position:absolute; right:10px; top:0;
+        }
+        header #logo_wrap a{color:white; font-weight:bold; font-size:1.3em;}
+        /* * * header #search * * */
+        header #search{
+            height:50px;
+            position:relative; /* submit버튼(돋보기 이미지)을 #search안에 */
+        }
+        header #search input[type='text']{
+            width:100%; height:50px;
+            border:3px solid #ea8f00;
+            box-sizing:border-box;
+            outline:3px solid #ea8f00;
+            font-size:1.3em;
+            padding:5px 55px 5px 5px; /* 검색창에 검색할경우 짤리지않고 쓰임 */
+        }
+        header #search input[type=submit]{
+            height:50px; width:50px;
+            background:url('ex/search.png') no-repeat;
+            border:0; outline:none;
+            position:absolute;
+            top:0; right:0;
+        }
+        /* * * #lnb * * */
+        #lnb ul{
+            overflow:hidden;
+            margin:5px 0; /* 위 아래 밖여백만 5px */
+        }
+        #lnb ul li{
+            float:left;
+            width:16.666%;
+            text-align:center;
+            height:40px; line-height:40px;
+            border-right:2px solid #ea8f00;
+            box-sizing:border-box;
+        }
+        #lnb ul li:last-child{
+            border:none;
+        }
+        /* * * section #section1 * * */
+        section #section1{
+            margin:5px 0;
+        }
+        /*section #section1 .row1,
+        section #section1 .row2,
+        section #section1 .row3*/
+        section #section1 > div{
+            overflow:hidden;
+        }
+        section #section1 .row1 > div,
+        section #section1 .row2 > div,
+        section #section1 .row3 > div{
+            float:left; width:50%;
+            height:120px;
+            border:2px solid white;
+            box-sizing:border-box;
+        }
+        section #section1 img{
+            width:100%; height:inherit;
+        }
+        /* * * section #section2 * * */
+        section #section2{
+            margin:5px 0;
+        }
+        section #section2 ul li{
+            border:1px solid gray;
+            padding:5px;
+        }
+        section #section2 ul li a{
+            /* 말 줄임 태그(ellipsis태그) */
+            white-space:nowrap;
+            overflow:hidden;
+            text-overflow:ellipsis;
+        }
+        /* * * section #section3 * * */
+        section #section3{
+            margin:5px 0; 
+        }
+        section #section3 ul li{
+            border:1px solid gray;
+            margin:5px; padding:10px;
+            height:100px;
+            position:relative; /* p.img태그를 position:absolute잡을 예정 */
+        }
+        section #section3 ul li p.img{
+            position:absolute;
+            left:10px; top:10px;
+            width:100px; height:100px;
+        }
+        section #section3 ul li p.txt{
+            padding-left:120px;
+        }
+        section #section3 ul li p.txt span:first-child{
+            display:block;
+            /* 말줄임 태그(ellipsis태그) */
+            white-space:nowrap;
+            overflow:hidden;
+            text-overflow:ellipsis;
+            font-size:1.3em;
+            font-weight:bold;
+            color:navy;
+        }
+        /* * * footer * * */
+        footer{
+            background-color:#ea8f00;
+            text-align:center; /* 이미지 및 글씨 가운데 정렬 (수평) */
+        }
+        footer p:last-child{
+            font-size:.8em; margin-bottom:5px;
+            padding-bottom:5px;
+            color:#333333;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div id="logo_wrap">
+            <img src="ex/menu.png" alt="메뉴 아이콘" class="menu" />
+            <a href="ex.html" class="logo">mobile logo</a>
+            <img src="ex/myinfo.png" alt="내정보" class="myinfo" />
+        </div>
+        <div id="search">
+            <form>
+                <input type="text" name="query_word" />
+                <input type="submit" value="" /> <!-- value는 빈스트링으로 -->
+            </form>
+        </div>
+    </header>
+    <div id="lnb">
+        <ul>
+            <li><a href="#I1">lnb1</a></li>
+            <li><a href="#I2">lnb2</a></li>
+            <li><a href="#I3">lnb3</a></li>
+            <li><a href="#I4">lnb4</a></li>
+            <li><a href="#I5">lnb5</a></li>
+            <li><a href="#I6">lnb6</a></li>
+        </ul>
+    </div>
+    <section>
+        <div id="section1">
+            <div class="row1">
+                <div>
+                    <a href="https://v.daum.net/v/20230818101339155">
+                        <img src="https://img4.daumcdn.net/thumb/R658x0.q70/?fname=https://t1.daumcdn.net/news/202308/18/NEWS1/20230818101340866pfgc.jpg" alt="1행1열" />
+                    </a>
+                </div>
+                <div>
+                    <a href="https://v.daum.net/v/20230818100637912">
+                        <img src="https://img2.daumcdn.net/thumb/R658x0.q70/?fname=https://t1.daumcdn.net/news/202308/18/NEWS1/20230818100637499iizp.jpg" alt="1행2열" />
+                    </a>
+                </div>
+            </div><!-- .row1 -->
+            <div class="row2">
+                <div>
+                    <a href="https://v.daum.net/v/20230818090302530">
+                        <img src="https://img3.daumcdn.net/thumb/R658x0.q70/?fname=https://t1.daumcdn.net/news/202308/18/WomanDonga/20230818090305718brvz.jpg" alt="1행3열" />
+                    </a>
+                </div>
+                <div>
+                    <a href="https://v.daum.net/v/20230818050522111">
+                        <img src="https://img2.daumcdn.net/thumb/R658x0.q70/?fname=https://t1.daumcdn.net/news/202308/18/hani/20230818095001887rguq.jpg" alt="1행4열" />
+                    </a>
+                </div>
+            </div> <!-- .row2 -->
+            <div class="row3">
+                <div>
+                    <a href="https://v.daum.net/v/20230818100119713">
+                        <img src="https://img2.daumcdn.net/thumb/R658x0.q70/?fname=https://t1.daumcdn.net/news/202308/18/shindonga/20230818100120890qdto.jpg" alt="1행5열" />
+                    </a>
+                </div>
+                <div>
+                    <a href="https://v.daum.net/v/20230818095013211">
+                        <img src="https://img4.daumcdn.net/thumb/R658x0.q70/?fname=https://t1.daumcdn.net/news/202308/18/pressian/20230818095015399bqwp.jpg" alt="1행6열" />
+                    </a>
+                </div>
+            </div><!-- .row3 -->
+        </div>
+        <div id="section2">
+            <ul>
+                <li>
+                    <a href="https://v.daum.net/v/20230818082602543">
+                        압구정 롤스로이스’ 피의자 구속 송치… “진심으로 사죄울 강남구 압구정에서 약물에 취해 차를 몰다가 20대 여성을 치어 중상을 입힌 혐의를 받는, 이른바 ‘압구정 롤스로이스 사건’ 피의자 신모(28)씨가 18일 구속 송치됐다.
+                    </a>
+                </li>
+                <li>
+                    <a href="https://v.daum.net/v/20230818095013211">
+                        오랜 시간 음악을 들어왔다. 음반을 사고, 음악 잡지를 읽고, 불법 복제 비디오를 보며 어떻게든 음악을 탐했다.
+                    </a>
+                </li>
+                <li>
+                    <a href="https://v.daum.net/v/20230818103436995">
+                        오는 10월부터 ‘흰 우유 3,000원 시대’가 열릴 것으로 보인다
+                    </a>
+                </li>
+                <li>
+                    <a href="https://v.daum.net/v/20230818103436995">
+                        오는 10월부터 ‘흰 우유 3,000원 시대’가 열릴 것으로 보인다.
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div id="section3">
+            <ul>
+                <li>
+                    <p class="img">
+                        <img src="http://via.placeholder.com/100x100" alt="더미이미지100*100" />
+                    </p>
+                    <p class="txt">
+                        <span>첫번째 span은 말줄임태그를 사용할 예정입니다. block형 태그로 전환할 예정</span>
+                        <span>두번째 span은 말줄임태그도 사용 안하고, line형 태그로 그대로 사용</span>
+                    </p>
+                </li>
+                <li>
+                    <p class="img">
+                        <img src="http://via.placeholder.com/100x100" alt="더미이미지100*100" />
+                    </p>
+                    <p class="txt">
+                        <span>첫번째 span은 말줄임태그를 사용할 예정입니다. block형 태그로 전환할 예정</span>
+                        <span>두번째 span은 말줄임태그도 사용 안하고, line형 태그로 그대로 사용</span>
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <footer>
+        <p><img src="ex/logo.png" alt="로고" /></p>
+        <p>서울시 서대문구 대현동 은하빌딩 2F</p>
+    </footer>
+</body>
+</html>

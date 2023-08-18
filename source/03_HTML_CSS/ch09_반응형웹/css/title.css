@@ -1,0 +1,13 @@
+﻿/* css/title.css : 레이아웃과 title */
+#wrap{
+    width:600px; margin:10px auto;
+    border:1px solid gray;
+    padding:10px;
+}
+#wrap #title{
+    text-align:center;
+    height:70px; line-height:70px;
+    text-decoration:underline;
+    margin-bottom:30px;
+}
+#wrap hr{border:1px solid red;}
