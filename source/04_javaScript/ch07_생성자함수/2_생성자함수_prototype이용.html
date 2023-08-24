@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        function Student(name, kor, mat, eng, sci){ // 일반함수는 소문자, 생성자 함수는 대문자로 시작(함수내에 this.있냐없냐)
+            this.name = name;
+            this.kor = kor;
+            this.mat = mat;
+            this.eng = eng;
+            this.sci = sci;
+        } // 생성자 함수
+        Student.prototype.getSum = function(){
+            return this.kor + this.mat + this.eng + this.sci;
+        };
+        Student.prototype.getAvg = function(){
+            return this.getSum()/4;
+        };
+        Student.prototype.toString = function(){
+            let output = '';
+            for(let key in this){
+                if(key != 'getSum' && key != 'getAvg' && key != 'toString'){
+                    output += key + ':' + this[key] + '&nbsp; ';
+                }else if(key == 'getSum' || key == 'getAvg'){
+                    output += key.substring(3).toLowerCase() + ':' + this[key]() + '&nbsp; '; // toUpperCase : 대문자로, toLowerCase : 소문자로
+                }// if
+            }// for
+            return output;
+        };
+
+
+
+
+        let students = [new Student("홍길동", 99, 98, 97, 99),
+                        new Student("박길동", 89, 88, 87, 89),
+                        new Student("이길동", 69, 68, 67, 69),];
+        students.forEach(function(data, idx){
+            document.write(idx + '번째 : ' + students[idx] + '<br>');
+        });
+        document.write(students.length + '명');
+        students.pop();
+        document.write('<hr>삭제후<hr>')
+        students.forEach(function(data, idx){
+            document.write(idx + '번째 : ' + students[idx] + '<br>');
+        });
+        document.write(students.length + '명');
+    </script>
+</head>
+<body>
+
+</body>
+</html>

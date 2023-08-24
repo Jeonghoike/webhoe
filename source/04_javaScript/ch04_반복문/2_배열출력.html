@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+  <meta charset="UTF-8">
+  <title></title>
+  <script>
+    var arr = [273,32, '홍길동'];
+    // 1. 일반for문
+    document.write('<h3>1. 일반for문 이용</h3>');
+    for(let idx=0 ; idx<arr.length ; idx++){
+      document.write(idx + '번째 : ' + arr[idx] + '<br>');
+    }
+    // 2. for-in문(object나 array에서 모두 사용)
+    document.write('<h3>2. for-in문 이용</h3>');
+    for(var idx in arr){
+      document.write(idx + '번째 : ' + arr[idx] + '<br>');
+    }
+    // 3. forEach() 함수 이용1
+    document.write('<h3>3. forEach()함수 이용</h3>');
+    // 배열명 : arr
+    // 데이터 : 273, 32, '홍길동'
+    // 인덱스 : 0,   1,  2
+    arr.forEach(function(data, idx){
+      document.write(idx + '번째 : ' + data + '<br>');
+    });
+    // 4. forEach() 함수 이용2
+    document.write('<h3>4. forEach()함수 이용(인덱스를 사용안 할 때)</h3>');
+    arr.forEach(function(data){
+      document.write(data + '<br>');
+    });
+  </script>
+</head>
+<body>
+
+</body>
+</html>

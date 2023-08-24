@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        /* 자바에서의 기본 자료형과 객체자료형
+        Integer iObj = new Integer(10);
+        iObj.toString(); 가능
+        int i = 10;
+        i.toString() 불가능
+        */
+        // 자바스크립트에서의 기본데이터타입(number, string, boolean) vs 객체데이터타입
+        let priNum = 273; // 기본 데이터타입
+        let objNum = new Number(273); // 객체 데이터 타입
+        document.write('priNum의 타입은 ' + typeof(priNum) + '<br>');
+        document.write('objNum의 타입은 ' + typeof(objNum) + '<br>');
+        // constructor : 생성자 함수 
+        document.write('priNum의 생성자가 Number : ' + (priNum.constructor==Number) + '<br>');
+        document.write('objNum의 생성자가 Number : ' + (objNum.constructor==Number) + '<br>');
+        if(priNum.constructor == objNum.constructor){
+            document.write('priNum과 objNum의 저장된 객체 타입은 같다<br>');
+        }else{
+            document.write('priNum과 objNum의 저장된 객체 타입은 다르다<br>');
+        }
+        document.write(priNum.toExponential(2) + '<br>'); // 지수형 표현 273
+        document.write(objNum.toExponential(2) + '<br>');
+        // (1) 내장된생성자 함수 Number의 prototype에 메소드 추가
+        Number.prototype.method1 = function(){
+            document.write('Number 타입이면 다 호출 가능<br>');
+        };
+        priNum.method1();
+        objNum.method1();
+        // (2) objNum 객체에 메소드 추가
+        objNum.method2 = function(){
+            document.write('objNum에 메소드 추가(priNum사용 불가)<br>');
+        };
+        // priNum.method2();  에러
+        objNum.method2();
+        // (3) priNum에는 메소드 추가 불가
+        priNum.method3 = function(){
+            document.write('안 될 듯');
+        };
+        // priNum.method3(); 에러
+        // 기본데이터타입과 객체데이터타입의 차이점 : 메소드 (객체데이터타입에 가능)
+    </script>
+</head>
+<body>
+
+</body>
+</html>

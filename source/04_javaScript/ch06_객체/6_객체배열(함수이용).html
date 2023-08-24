@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        // 객체를 만드는 함수
+        function makeStudent(name, kor, mat, eng, sci){
+            let resultObj = {
+                'name' : name,
+                'kor' : kor,
+                'mat' : mat,
+                'eng' : eng,
+                'sci' : sci,
+                'getSum' : function(){
+                    return this.kor + this.mat + this.eng + this.sci;
+                },
+                'getAvg' : function(){
+                    return this.getSum()/4;
+                },
+                'toString' : function(){
+                    let output = '';
+                    for(let key in this){
+                        if(key != 'getSum' && key != 'getAvg' && key != 'toString'){
+                            output += key + ':' + this[key] + '&nbsp; ';
+                        }else if(key == 'getSum' || key == 'getAvg'){
+                            output += key.substring(3).toLowerCase() + ':' + this[key]() + '&nbsp; '; // toUpperCase : 대문자로, toLowerCase : 소문자로
+                        }// if
+                    }// for
+                    return output;
+                }, // toString
+            }; // resultObj 선언
+            return resultObj;
+        } // makeStudent() 함수
+
+        var students =[];
+        students.push(makeStudent('홍길동',91,90,91,90));
+        students.push(makeStudent('김갑부',95,90,99,90));
+        students.push(makeStudent('박치기',80,90,91,85));
+        students.push(makeStudent('윤미미',85,90,70,90));
+        students.push(makeStudent('이기둥',75,99,80,90));
+        students.forEach(function(data, idx){
+            document.write(idx + '번째 : ' + data + '<hr>');
+        });
+    </script>
+</head>
+<body>
+
+</body>
+</html>

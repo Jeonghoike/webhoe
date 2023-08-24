@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        var arr = [1, 2, 300]; // {0:1, 1:2, 2:300} - 일반for문, for-in문, forEach()이용 출력
+        for(let idx in arr){
+            document.write(idx + ':' + arr[idx] + '<br>');
+        }
+        var obj = {'name':'홍길동', 'age':20}; // for-in문 이용 출력 // 키값
+        for(let key in obj){
+            document.write(key + ':' + obj[key] + '<br>'); // obj['name'], obj.name
+        }
+        obj.address = '서울 서대문구';
+        obj.hobby = '개발 수업 복습하기';
+        document.write('<h2>obj객체에 address 속성 추가 후 </h2>');
+        for(let key in obj){
+            document.write(key + ':' + obj[key] + '<br>'); // obj['name']
+        }
+        delete(obj.hobby);
+        document.write('<h2>obj객체에 address 속성 삭제(hobby) 후 </h2>');
+        for(let key in obj){
+            document.write(key + ':' + obj[key] + '<br>'); // obj['name']
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

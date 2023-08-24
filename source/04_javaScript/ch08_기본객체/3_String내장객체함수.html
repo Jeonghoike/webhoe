@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        String.prototype.replace = function(oldStr, newStr){
+            return this.split(oldStr).join(newStr);
+        }
+        var str = 'abc@acbd@abc@';
+        document.write('원본' + str + '<br>');
+        document.write('@를 -로 수정 : ' + str.replace('@', '-') + '<br>');
+        document.write('@를 -로 수정 : ' + str.replaceAll('@', '-') + '<br>');
+        document.write('@를 없애기 : ' + str.replace('@', '') + '<br>');
+        document.write('글씨 길이 : ' + str.length + '<br>'); 
+        document.write('문자 연결 : ' + str.concat(str) + '<br>');
+        document.write('3번째부터 5번째 앞까지 추출 : ' + str.substring(3, 5) + '<br>');
+        document.write('3번째부터 2글자 추출 : ' + str.substr(3, 2) + '<br>');
+        document.write('처음 나오는 @ 위치(인덱스) : ' + str.indexOf('@') + '<br>');
+        document.write('뒤에서부터 @가 처음 나오는 위치 : ' + str.lastIndexOf('@') + '<br>');
+        const str1 = '    ja va   ';
+        document.write('양쪽 space 없애기 : ' + str1.trim() + '<br>');
+        document.write('대문자로 전환 : ' + str1.toUpperCase() + '<br>');
+        document.write('소문자로 전환 : ' + str1.toLowerCase() + '<br>');
+    </script>
+</head>
+<body>
+
+</body>
+</html>

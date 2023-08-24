@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+  <meta charset="UTF-8">
+  <title></title>
+  <script>
+    let cnt = 0; // 횟수
+    let startTime = new Date().getTime(); // 현재 시점의 밀리세컨 
+    while(new Date().getTime() <= startTime+1000 ){
+      cnt++;
+    }
+    document.write('1초동안 while문 수행 횟수 : ' + cnt +'번' + '<br>'); // cnt = 123456789
+    document.write('1초동안 while문 수행 횟수 : ')
+    let cntStr = String(cnt); // cntStr = '123456789'
+    let temp = cntStr.length % 3;
+    for(let idx=0 ; idx <cntStr.length ; idx++){
+      if(temp==0){
+        temp = 3;
+        if(idx!=0){
+          document.write(',');
+        }
+      }
+      document.write(cntStr[idx]);  // 123,456,789
+      temp--;
+    }
+    document.write('번');
+  </script>
+</head>
+<body>
+</body>
+</html>

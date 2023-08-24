@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+  <meta charset="UTF-8">
+  <title></title>
+  <script>
+    // 자바에서의 배열 : 동일 자료형의 집합. 배열의 크기가 고정적.int[] arr = {1,2,3};
+    // 자바스크립트에서의 배열 : 자료의 집합. 배열의 크기가 가변적.
+    var arr = [2, 4, '홍길동'];
+    document.write('arr의 타입 : ' + typeof(arr) + ' / 값 : ' + arr + '<br>');
+    document.write('arr 방의 갯수 : ' + arr.length + '<br>');
+    arr.push(8); // arr 제일 끝번방에 추가
+    arr.unshift(0); // arr 제일 앞에 추가
+    document.write('추가후 arr의 타입 : ' + typeof(arr) + ' / 값 : ' + arr + '<br>');
+    document.write('arr 방의 갯수 : ' + arr.length + '<br>');
+    var value = arr.pop(); // 마지막 배열방의 값을 return하고 삭제
+    document.write('arr에서 삭제된 값 value : ' + value + '<br>');
+    document.write('삭제후 arr의 타입 : ' + typeof(arr) + ' / 값 : ' + arr + '<br>');
+    document.write('arr 방의 갯수 : ' + arr.length + '<br>');
+  </script>
+</head>
+<body>
+</body>
+</html>

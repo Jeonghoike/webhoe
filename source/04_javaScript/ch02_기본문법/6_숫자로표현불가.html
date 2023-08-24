@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+  <meta charset="UTF-8">
+  <title></title>
+  <script>
+    var i = Number('a'); // NaN
+    document.write('i=' + i + ' - i의 타입은 ' + typeof(i) + '<br>');
+    document.write('i가 NaN인지 여부 : ' + isNaN(i) + '<br>');
+    i = 10/0;// 10/0.0000000000000000000000000000000000000000000000000000000000001
+    document.write('i=' + i + ' - i의 타입은 ' + typeof(i) + '<br>');
+    document.write('i가 유한한수인지 여부 : ' + isFinite(i) + '<br>');
+  </script>
+</head>
+<body>
+
+</body>
+</html>

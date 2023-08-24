@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+  <meta charset="UTF-8">
+  <title></title>
+  <script>
+    // let i = parseInt(prompt("i의 j승을 구하려는데 i값은?"));
+    // let j = parseInt(prompt("i의 j승을 구하려는데 j값은?"));
+    // document.write('입력한 i의 j승은 ' + pow(i, j) + '<br>');
+    document.write('pow(2, 3) = ' + pow(2, 3) + '<br>');
+    // 선언된 매개변수보다 많은 경우 뒷부분은 무시
+    document.write('pow(2,3,10,10) = ' + pow(2, 3, 10, 10) + '<br>');
+    // 선언된 매개변수보다 적은 경우, 없는 나머지는 undefined.
+    document.write('pow(2) = ' + pow(2) + '<br>');
+    let r = pow(3, 2);
+    document.write('r = ' + r);
+
+    function pow(x, y){// x의 y승을 return하는 함수
+      let result = 1;
+      for(let cnt=1 ; cnt<=y ; cnt++){
+        result *= x; // result = result*x; 
+      }
+      // return result; return없으면 undefined
+    }
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

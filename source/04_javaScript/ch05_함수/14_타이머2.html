@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        var id = setInterval(function(){
+            //document.write(new Date() + '<br>');
+            document.body.innerHTML += new Date() + '<br>';
+        }, 1000); // 1000밀리세컨마다 콜백함수 수행
+        // 일정시간(10초) 후 타이머(id) 중지 : clearInterval(id)
+        setTimeout(function(){
+            clearInterval(id);
+        }, 10000); // 10000 밀리세컨 후 한번 콜백함수 수행
+    </script>
+</head>
+<body>
+
+</body>
+</html>

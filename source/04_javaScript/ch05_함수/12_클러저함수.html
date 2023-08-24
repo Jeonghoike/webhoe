@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        // 클로저함수 : return 된 함수
+        function test(name){
+            var msg = 'Hello, ' + name + '님 방가방가';
+            const fun = function(){
+                alert(msg);
+            };
+            return fun; // 클러저함수 return
+        }
+        let variable = test('홍길동');
+        variable();
+        test('신길동')();
+    </script>
+</head>
+<body>
+
+</body>
+</html>

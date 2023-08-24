@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        function Rectangle(width, height){
+            if(width<=0){
+                throw '음수 가로 길이는 없습니다'; // 강제로 예외 발생
+            }else{
+                this.width = width;
+            }
+            if(height<=0){
+                throw '음수 세로 길이는 없습니다'; // 강제 예외 발생
+            }else{
+                this.height = height;
+            }
+        } // 생성자 함수
+        Rectangle.prototype.getArea = function(){
+            return this.width * this.height;
+        };
+        Rectangle.prototype.toString = function(){
+            return '가로:'+this.width+'세로:'+this.height+'넓이:'+this.getArea()+'<br>';
+        };
+        //let rect;
+        try{
+          // rect = new Rectangle(5, 7);
+            var rect = new Rectangle(-5, 7);
+        }catch{
+            // 예외가 발생되면 공사중 페이지로 이동
+            location.href = '공사중.html';
+        }
+        document.write(rect);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

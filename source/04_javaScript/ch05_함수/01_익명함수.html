@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+  <meta charset="UTF-8">
+  <title></title>
+  <script>
+    // document.write(i + '<br>'); i변수 선언 후 사용 가능
+    var i = 'hello';
+    document.write(i + '<br>');
+    var i = 'hi';
+    document.write(i + '<br>');
+    // functionVar(10, 20); // 익명함수의 호출은 변수 할당 후 사용 가능
+    var functionVar = function(i, j){ // 함수 표현식
+      alert(i + ' test ' + j);
+    }; // 익명함수
+    document.write('functionVar : ' + functionVar + '<br>');
+    document.write('functionVar의 타입 : ' + typeof(functionVar) + '<br>');
+    functionVar(10, 20); // 익명함수 호출은 변수의 이름으로 호출
+    var functionVar = (i, j) => { // 화살표 함수
+      alert(i + '/' +j);
+    };
+    functionVar(10,20);// 익명함수 호출은 변수의 이름으로 호출
+  </script>
+</head>
+<body>
+</body>
+</html>

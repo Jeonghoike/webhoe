@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+  <meta charset="UTF-8">
+  <title></title>
+  <script>
+    // int[] arr = {1,2,3};
+    var person = {'name':'홍길동', 'age':20};
+    var arr = [273, 'hello', true, function(){alert(1);}, person, [1,2,3]];
+            // {'0':273, '1':'hello', ...}
+    document.write('원래 배열방의 갯수 : ' + arr.length + '<br>');
+    document.write(5 + ' : ' + arr[5] + '<br>');
+    while(confirm('배열방에 데이터 추가할까요?')){
+      var data = prompt('배열방에 넣을 데이터는 ?');
+      arr.push(data);
+      document.write('추가 후 배열방의 갯수 : ' + arr.length + '<br>');
+      document.write('추가된 맨 마지막방 데이터 : ' + arr[arr.length-1] + '<br>');
+    }
+  </script>
+</head>
+<body>
+</body>
+</html>

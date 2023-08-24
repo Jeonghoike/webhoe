@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+  <meta charset="UTF-8">
+  <title></title>
+  <style>
+  /*  body{background-color: red;}*/
+  </style>
+  <script>
+    document.write('<h3>요일에 따른 배경색 지정<h3>');
+    document.write('<p>일(빨)월(주)화(노)수(초)목(파)금(남)토(보)</p>');
+    var week = new Date().getDay(); // 0(일), 1(월), 2(화), .. 6(토)
+    switch(week){
+      case 0: document.body.style = 'background-color: #FF0000'; break;
+      case 1: document.body.style = 'background-color: orange'; break;
+      case 2: document.body.style = 'background-color: yellow'; break;
+      case 3: document.body.style = 'background-color: #00ff00'; break;
+      case 4: document.body.style = 'background-color: rgb(0,0,255)'; break;
+      case 5: document.body.style = 'background-color: navy'; break;
+      case 6: document.bgColor = 'violet';
+    }
+  </script>
+</head>
+<body>
+
+</body>
+</html>

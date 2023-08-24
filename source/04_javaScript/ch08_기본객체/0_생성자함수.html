@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        function Rectangle(width, height){
+            this.width = width;
+            this.height = height;
+        }
+        Rectangle.prototype.area = function(){
+            return this.width * this.height;
+        }
+        function Triangle(width, height){
+            this.width = width;
+            this.height = height;
+        }
+        Triangle.prototype.area = function(){
+            return this.width * this.height * 0.5;
+        }
+        let shape1 = new Rectangle(5, 7);
+        let shape2 = new Rectangle(3, 5);
+        let shape3 = new Triangle(5, 9);
+        if(typeof(shape1) == typeof(shape3)){
+            document.write('shape1과 shape3의 typeof 결과는 같습니다 : ' + typeof(shape1) + '<br>');
+        }else{
+            document.write('shape1과 shape3의 typeof 결과는 다릅니다');
+        }
+        // object의 생성자함수(constructor)
+        document.write('shape1의 생성자가 Rectangle인지 : ' + (shape1.constructor==Rectangle) + '<br>');
+        // document.write('shape2의 생성자가 Rectangle인지 : ' + shape2.constructor + '<br>');
+        // document.write('shape3의 생성자다 Rectangle인지 : ' + shape3.constructor + '<br>');
+        if(shape1.constructor == shape3.constructor){
+            document.write('shape1과 shape3은 같은 생성자를 통한 생성된 같은 유형의 객체다');
+        }else{
+            document.write('shape1과 shape3은 다른 생성자를 통해 생성된 다른 유형의 객체다');
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        let id = setTimeout(function(){
+            alert('3초 지났다');
+        }, 3000);
+        var cnt = 0;
+        let nowTime  = new Date().getTime(); // 현재 밀리세컨 10,000
+        while(new Date().getTime() < nowTime + 2000){ // 2초동안 while문 수행
+            cnt ++;
+        }
+        // setTimeOut 중지
+        //clearTimeout(id);
+        document.write('2초 동안 ' + cnt + '번 while문 수행');
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="4_replaceAll.js"></script>
+    <script>
+        let students = [{'name':'김', 'kor':99, 'mat':99, 'eng':97, 'sci':99},
+                        {'name':'박', 'kor':99, 'mat':99, 'eng':97, 'sci':99}];
+        students.push({name:'이', kor:87, mat:91, eng:99, sci:88});
+        students.push({name:'장', kor:99, mat:99, eng:99, sci:99});
+        students.push({name:'윤', kor:87, mat:99, eng:90, sci:81});
+        for(var idx in students){
+            students[idx].getSum = function(){
+                return this.kor + this.mat + this.eng + this.sci;
+            };
+            students[idx].getAvg = function(){ 
+                return this.getSum() /4; // 소수점 유지 // 위에 getSum이라 선언해서 쓸필요X
+            };
+            students[idx].toString = function(){
+                var output = '';
+                for(var key in this){
+                    if(key != 'getSum' && key != 'getAvg' && key != 'toString'){
+                        output += key + ':' + this[key] + ' ';
+                    }else if(key == 'getSum'){
+                        output += key.substring(3) + ':' + this[key]() + ' ';
+                    }else if(key == 'getAvg'){
+                        output += key.substring(3) + ':' + this[key]() + '<br>';
+                    } // if
+                } // for
+                //output을 만듦
+                return output;
+            }; // toString
+        } // for
+        // 1. 일반 for문
+        var out = '';
+        for(let idx=0; idx<students.length ; idx++){
+            out += idx + '번째 : ';
+            out += students[idx];
+        }
+        document.write(out);
+        // alert(out.toString().replaceAll('<br>', '\n'));
+        // alert(replaceAll(out.toString(), '<br>', '\n'));
+        document.write('<hr>');
+        // 2. for-in문
+        for(var idx in students){
+            document.write(idx + '번째 : ' + students[idx]);
+        }
+        document.write('<hr>');
+        // 3. for-of문 : idx 미포함
+        for(var s of students){
+            document.write(s);
+        }
+        document.write('<hr>');
+        // 4. forEach() : idx 포함
+        students.forEach(function(data, idx){
+            document.write(idx+'번째 : ' + data);
+        }); 
+        document.write('<hr>');
+        // 5. forEach() : idx 미포함
+        students.forEach(function(data){
+            document.write(data);
+        });
+    </script>
+</head>
+<body>
+
+</body>
+</html>

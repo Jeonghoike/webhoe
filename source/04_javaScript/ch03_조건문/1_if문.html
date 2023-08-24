@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+  <meta charset="UTF-8">
+  <title></title>
+  <style>
+    img {width: 200px;}
+  </style>
+  <script>
+    // const date = new Date(); // 이시점
+    // const hour = date.getHours(); // 0~23
+    const hour = new Date().getHours();
+    if(hour<12){
+      document.write('상쾌한 오전입니다<br>');
+      document.write('<img src="img/am.jpg" alt="am사진">');
+    }else{
+      document.write('후덥지근한 오후입니다<br>');
+      document.write('<img src="https://search.pstatic.net/sunny/?src=https%3A%2F%2Fi.pinimg.com%2F736x%2F3e%2F38%2F5c%2F3e385cd72ba84fe20a812de7b55fecba--the-sun-dashboards.jpg&type=sc960_832" alt="pm사진">')
+    }
+  </script>
+</head>
+<body>
+
+</body>
+</html>
