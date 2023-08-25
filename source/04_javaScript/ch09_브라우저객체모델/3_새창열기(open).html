@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        var child = open('2_window의onload.html', ' ', 'width=450, height=500, left=100, top=50');
+        /* open(속성1, 속성2, 속성3);
+         * 속성1 : 열림 새창의 url
+         * 속성2 : 새창 윈도우의 이름 ''
+         * 속성3 : width, height, left, top, location(주소창유무로1, 0)...*/
+        if(child){
+            //child.document.write('<h1>새창</h1>');
+        }else{
+            alert('팝업 차단 해제하셔야 새창이 열립니다');
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

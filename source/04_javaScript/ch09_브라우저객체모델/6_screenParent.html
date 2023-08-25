@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        var child = open('6_centerChild.html', '', 'width=100,height=100');
+        let childWidth = screen.width/2;
+        let childHeight = screen.height/2;
+        let childleft = childWidth/2; // screen.width/4;
+        let childtop = childHeight/2; // screen.width/4;
+        child.resizeTo(childWidth, childHeight); // child의 사이즈 조정
+        child.moveTo(childleft, childtop);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

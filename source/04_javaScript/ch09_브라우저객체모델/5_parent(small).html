@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        let child;
+        function openLarge(){ // 새창(5_child(large).html)열기
+            child =open('5_child(large).html', '', 'width=500,height=610,left=10');
+            if(!child){
+                alert('팝업 차단 해제하세요');
+            }
+        };
+        function closeLarge(){ // 열린새창(5_child(large).html) 닫기
+            child.close();
+        };
+    </script>
+</head>
+<body>
+    <h2>작은 그림의 parent 창</h2>
+    <img src="img/small.jpg" alt="작은그림" onmouseover="openLarge()"
+                                            onmouseout="closeLarge()">
+</body>
+</html>
