@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        window.onload = function(){
+            // 1.id : getElementById(id명)
+            // 2.class : getElementsByClassName(class명)
+            // 3.name : getElementsByNmae(파라미터이름)
+            // 4.tag : getElementsByTagName(태크명)
+            // 5.선택자 하나(맨처음 나오는 하나) : querySelector(선택자)
+            // 6.선탣자 모두 : querySelectorAll(선택자)
+            var header1 = document.querySelector('h1.header');
+            header1.innerHTML = '첫번째만';
+            var header = document.querySelectorAll('h1.header'); // 배열로 받음
+            let col = ['red', 'orange'];
+            for(let idx in header){
+                header[idx].style = 'background-color :' +col[idx] + ';';
+            }
+            var param = document.querySelectorAll('input[type="text"]')[0];
+            param.value = '다들 몸 조심하세요';
+        };
+    </script>
+</head>
+<body>
+    <h1 class="header">HEADER1</h1>
+    <h1 class="header">HEADER2</h1>
+    <input type="text" name="param">
+</body>
+</html>

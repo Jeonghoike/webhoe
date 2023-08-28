@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        table {width:280px; height: 100px; margin: 10px auto;}
+        h2 {text-align: center;}
+    </style>
+    <script>
+        var color = ['red', 'orange', 'yellow', 'green', 'blue', 'navy', 'violet', 'white'];
+        window.onload = function(){
+            var tds = document.querySelectorAll('td');
+            for(let idx in tds){
+                tds[idx].style = 'background-color: ' + color[idx];
+            }
+        };
+        function cc1(){
+            document.body.style.backgroundColor ='black';
+            document.getElementById('text').style.color='red';
+        };
+        function cc2(){
+            document.body.style.backgroundColor ='black';
+            document.getElementById('text').style.color='orange';
+        };
+        function cc3(){
+            document.body.style.backgroundColor ='black';
+            document.getElementById('text').style.color='yellow';
+        };
+        function cc4(){
+            document.body.style.backgroundColor ='black';
+            document.getElementById('text').style.color='green';
+        };
+        function cc5(){
+            document.body.style.backgroundColor ='black';
+            document.getElementById('text').style.color='blue';
+        };
+        function cc6(){
+            document.body.style.backgroundColor ='black';
+            document.getElementById('text').style.color='navy';
+        };
+        function cc7(){
+            document.body.style.backgroundColor ='black';
+            document.getElementById('text').style.color='violet';
+        };
+        function closeCol(){
+            document.body.style.backgroundColor ='white';
+        };
+    </script>
+</head>
+<body>
+    <table>
+        <tr id="changeCol">
+            <td onmouseover="cc1()" onmouseout="closeCol()"></td>
+            <td onmouseover="cc2()" onmouseout="closeCol()"></td>
+            <td onmouseover="cc3()" onmouseout="closeCol()"></td>
+            <td onmouseover="cc4()" onmouseout="closeCol()"></td>
+            <td onmouseover="cc5()" onmouseout="closeCol()"></td>
+            <td onmouseover="cc6()" onmouseout="closeCol()"></td>
+            <td onmouseover="cc7()" onmouseout="closeCol()"></td>
+        </tr>
+    </table>
+    <h2 id="text">야호 거의 끝났다</h2>
+</body>
+</html>

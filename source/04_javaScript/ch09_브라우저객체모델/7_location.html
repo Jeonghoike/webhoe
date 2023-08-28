@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        var sec = 0;
+        var id = setInterval(() => {
+            sec++;
+            document.body.innerHTML += '<h' + sec + '>' + sec + '초 지남</h'+ sec + '>';
+        }, 1000);
+        setTimeout(() => {
+            clearInterval(id); // 5초후 setInterval 타이머 제거
+            // 페이지 변경(url 변경) 방법
+            location.href = '8_history.html';
+            // location = '8_history.html';
+            //location.assign('8_history.html');
+        }, 5000);
+    </script>
+</head>
+<body>
+    <h1>잠시 후 페이지 이동이 있겠습니다.</h1>
+</body>
+</html>

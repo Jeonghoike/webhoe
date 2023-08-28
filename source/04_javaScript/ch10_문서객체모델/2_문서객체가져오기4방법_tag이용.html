@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        window.onload = function(){
+            var header = document.getElementsByTagName('h1'); // 배열로
+            // for(let idx=0 ; idx<header.length ; idx++){
+            //     header[idx].innerHTML = '바꿔 #' + idx;
+            // }
+            for(let idx in header){
+                header[idx].innerHTML = '바꿔 #' + idx;
+            }
+            // for(let element of header){
+            //     element.innerHTML = '바꿔 #';
+            // }
+            // header.forEach(function(element, idx){ // forEach() 이용불가
+            //     header[idx].innerHTML = '바꿔 #' + idx;
+            // });
+        };
+    </script>
+</head>
+<body>
+    <h1>HEADER</h1>
+    <h1>HEADER</h1>
+    <h1>HEADER</h1>
+    <h1>HEADER</h1>
+    <h1>HEADER</h1>
+</body>
+</html>

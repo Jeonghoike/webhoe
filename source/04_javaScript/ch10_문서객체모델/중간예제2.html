@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        div{width:300px; margin:0 auto; border:1px solid blue; text-align:center;}
+    </style>
+        
+    <script>
+        var link0 = 'http://www.naver.com';
+        var link1 = 'http://www.daum.net';
+        var link2 = 'http://www.google.com';
+        var link3 = 'http://www.youtube.com';
+        function nLink(){
+            location.href = link0;
+        };
+        function dLink(){
+            location.href = link1;
+        };
+        function gLink(){
+            location.href = link2;
+        };
+        function yLink(){
+            location.href = link3;
+        };
+    </script>
+</head>
+<body>
+    <div>
+        <h1>중간예제2.메뉴</h1>
+            <input type="submit" name="naver" value="네이버" onclick="nLink()">
+            <input type="submit" name="daum" value="다음" onclick="dLink()">
+            <input type="submit" name="google" value="구글" onclick="gLink()">
+            <input type="submit" name="youtube" value="유투브" onclick="yLink()">
+    </div>
+</body>
+</html>

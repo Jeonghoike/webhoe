@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        span{color: red;}
+    </style>
+    <script>
+        var wrap;
+        window.onload = function(){
+            // wrap = document.getElementById('wrap'); // id를 이용
+            // wrap = document.getElementsByTagName('div')[0]; // tag 이영
+            // wrap = document.querySelector('#wrap'); // 선택자 이용
+            wrap = document.querySelectorAll('#wrap')[0];
+        };
+        function append(){
+            wrap.innerHTML += '<h1>HEADER</h1>';
+            var head = document.querySelectorAll('h1');
+            for(var idx in head){
+                head[idx].innerHTML += '<span> # </span>';
+            }
+        };
+        function remove(){
+            var h1 = document.getElementsByTagName('h1'); // 배열
+            if(h1.length>0){
+                wrap.removeChild(h1[0]);
+            }else{
+                alert('지울 h1태그가 없습니다');
+            }
+        };
+        function removeAll(){
+            var h1 = document.getElementsByTagName('h1'); // 배열
+            let cnt = h1.length; // 지워야할 횟수
+            for(let i=0 ; i<cnt ; i++){
+                wrap.removeChild(h1[0]);
+            }
+        };
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <button onclick="append()">h1태그 하나 추가하기</button>
+        <button onclick="remove()">h1태그 하나 제거하기</button>
+        <button onclick="removeAll()">h1태그 싹 다 제거하기</button>
+        <h1>HEADER</h1>
+        <h1>HEADER</h1>
+        <h1>HEADER</h1>
+    </div>
+</body>
+</html>
