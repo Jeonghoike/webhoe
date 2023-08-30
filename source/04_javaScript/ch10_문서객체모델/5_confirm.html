@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+    p{text-align: center; margin-top: 20px;}
+    </style>
+    <script>
+    var idTag, openerIdTag;
+    window.onload = function(){
+        openerIdTag = opener.document.getElementById('id');
+        idTag = document.getElementsByName('id')[0];
+        idTag.value = openerIdTag.value;
+    };
+    function confirmOK(){
+        openerIdTag.value = idTag.value;
+        opener.document.getElementById('idConfirmed').value = 1;
+        close();
+    }
+    </script>
+</head>
+<body>
+    <p>
+    ID <input type="text" name="id"/>
+    <button>체크</button>
+    </p>
+    <p><button onclick="confirmOK();">아이디사용</button></p>
+</body>
+</html>

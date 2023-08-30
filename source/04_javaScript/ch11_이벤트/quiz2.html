@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+    window.onload = function () {
+        var img = document.getElementsByTagName('img')[0];
+        img.onmousedown = function () {
+            this.setAttribute('src', 'img/but2.gif');
+            this.setAttribute('alt', 'mouse down');
+        };
+        img.onmouseup = function () {
+            this.setAttribute('src', 'img/but1.gif');
+            this.setAttribute('alt', 'mouse up');
+        };
+    };
+    </script>
+</head>
+<body>
+    <img src="img/but1.gif" alt="mouse up" />
+</body>
+</html>

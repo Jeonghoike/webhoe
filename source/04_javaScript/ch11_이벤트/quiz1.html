@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        window.onload = function(){
+            var overImg = ['img/0over.jpg','img/1over.jpg','img/2over.jpg','img/3over.jpg'];
+            var outImg = ['img/0out.jpg','img/0out.jpg','img/0out.jpg','img/0out.jpg'];
+            var menu = document.getElementsByClassName('menu');
+            for(let idx=0 ; idx<menu.length ; idx++){
+                menu[idx].onmouseover = function(){
+                    this.setAttribute('src', overImg[idx]);                
+                };
+                menu[idx].onmouseout = function(){
+                    this.setAttribute('src', outImg[idx]);
+                };
+            };
+        };
+    </script>
+</head>
+<body>
+    <img src="img/0out.jpg" alt="tutorial"  class="menu" >
+    <img src="img/1out.jpg" alt="example"  class="menu" >
+    <img src="img/2out.jpg" alt="special"  class="menu" >
+    <img src="img/3out.jpg" alt="link"  class="menu" >
+</body>
+</html>
