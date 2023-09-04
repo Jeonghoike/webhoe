@@ -1,0 +1,12 @@
+ul.control{
+    padding: 0;
+    overflow: hidden;
+}
+ul.control li{
+    float: left;
+    list-style: none;
+    padding-left: 3px;
+}
+ul.control li button{
+    font-size: 8px;
+}

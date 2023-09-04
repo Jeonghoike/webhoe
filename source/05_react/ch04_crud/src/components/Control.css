@@ -1,0 +1,6 @@
+ul.control, ul.control li{
+    padding-left: 10px;
+}
+ul.control li{
+    list-style: none;
+}

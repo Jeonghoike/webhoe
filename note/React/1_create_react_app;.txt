@@ -1,0 +1,21 @@
+React: 사용자 정의 태그를 만들어 주는 기술 중 하나이고 이를 component라 한다
+Component의 장점 : ①가독성 ②재사용성 ③유지보수 용이성
+Component 중심의 현대적 웹 애플리케이션 UI를 만드는 방법을 익혀 나만의 component도 만들고 남이 만든 component도 사용
+
+개발환경 구축
+소스 폴더를 만들어 그 폴더 cmd창에서 create-react-app . 실행
+폴더를 vs code에서 실행 : npm run start 또는 npm start 
+public의 index.html이 브라우저에서 열림
+src의 index.js가 실행 -> app.js 로 가는 소스를 수정
+
+베포(deploy)
+Network의 F12탭을 열고, 캐시비우기 밒 강력 새로고침하면 1.6M다운로드(react의 여러기능 포함)
+npm run build를 하면 build 폴더 생성됨
+npm install –g serve ; npm을 통해 설치된 간단한 웹 서버 가능하도록(serve명령을 사용가능하도록)
+npx serve –s build : build가 root로 함
+
+
+
+
+
+

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        h2, button{display: inline-block; margin: 10px;}
+    </style>
+</head>
+<body>
+    <div>다른 부분</div>
+    <hr>
+    <div id="root"></div>
+    <hr>
+    <div>다른 부분</div>
+    <!-- 개발용 -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <!-- 실무에서는 배포용보다 웹팩이나 바벨로 사용한다 -->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script type="text/babel">
+        // class LikeButton extends React.Component {
+        //     constructor(props){
+        //         super(props);
+        //         this.state = {liked : Boolean(Number(props.liked))};
+        //     }
+        //     render(){
+        //         if(this.state.liked){
+        //             return (<h2>You liked this. Thanks</h2>);
+        //         }
+        //         return (
+        //             <button onClick={()=>{
+        //                 this.setState({liked : true});
+        //             }}>
+        //                 지금은 아니라도 좋아요 클릭
+        //             </button>
+        //         );
+        //     }
+        // }
+        const LikeButton = props => {
+            // hook변수(일반 지역변수를 state화)
+            const [liked, setLiked] = React.useState(Boolean(Number(props.liked)));
+            if(liked){
+                return (
+                    <h2>You liked this. Thanks</h2>
+                );
+            }
+            return(
+                <button onClick={()=>{
+                    setLiked(true);
+                }}>
+                    지금은 아니라도 좋아요 클릭
+                </button>
+            );
+        }
+    </script>
+    <script type="text/babel">
+        ReactDOM.createRoot(document.getElementById('root')).render(
+            <div>
+                jQuery : <LikeButton liked="1"/><br/>
+                React : <LikeButton liked="0"/>
+            </div>
+        );
+    </script>
+</body>
+</html>
