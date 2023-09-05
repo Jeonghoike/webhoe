@@ -1,7 +1,0 @@
-package com.lec.ex2person_dtoDao;
-
-public class PersonMng {
-	public static void main(String[] args) {
-		PersonDao dao = PersonDao.getInsance();
-	}
-}

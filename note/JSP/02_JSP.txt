@@ -1,0 +1,29 @@
+jsp란, html문서 안에 동적인 웹 어플리케이션을 만들기 위해 jsp코드 삽입하고 확장자를 jsp
+
+JSP : HTML안 java
+servlet : java안 HTML
+
+문서작성 
+(1) jsp특징 
+    1. 동적 웹 어플리케이션 컴포넌트(컴포넌트는 JSP, HTML 등 웹 어플리케이션을 이루는 요소를 컴포넌트라 하고 그 컴포넌트를 담고 있는 것을 컨테이너라고 함)
+    2. jsp 확장자
+    3. 클라이언트의 요청에 동적으로 작동하고, 응답은 html
+    4. jsp는 서블릿으로 변환되어 실행(컴파일되면 톰캣서버가 변환)
+    5. MVC패턴에서 View로 이용됨
+(2) 프로젝트 생성
+   1. Dynamic Web Project ; 
+   2. Context root : 서버 입장에서 각 프로젝트를 구분해 주는 이름(프로젝트명은 첫문자를 소문자로) 
+   3. index.html에 대해 – web.xml에 의해 프로젝트를 실행시키면 첫페이지로 실행된다
+
+<jsp동작원리>
+브라우저에서 http://localhost:8090/ch02_semiJSP/hello.jsp (ch02)semiJSP:context root)
+
+소스폴더
+C:\webhoe\source\06_JSP\ch02_semiJSP\WebContent\hello.jsp
+
+실행폴더
+C:\webhoe\IDE\apache-tomcat-jsp\apache-tomcat-9.0.80\wtpwebapps\ch02_semiJSP\hello.jsp
+
+작업(jsp를 서블릿(자바안에 html)으로 바꾸는) 폴더
+C:\webhoe\IDE\apache-tomcat-jsp\apache-tomcat-9.0.80\work\Catalina\localhost\ch02_semiJSP\org\apache\jsp
+\hello_jsp.java 과 \hello_jsp.class를 생성하여 실행한 결과인 html을 브라우저에 던짐
