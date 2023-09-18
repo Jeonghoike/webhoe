@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<style></style>
+	<script></script>
+</head>
+<body>
+	<!-- <form action="step1.jsp"> 자바 사용 -->
+	<!-- <form action="step2.jsp"> 빈태그 사용 --> 
+	<!-- <form action="step3.jsp"> 프로세스단과 뷰단을 분리-->
+	<!-- <form action="step4.jsp"> param 속성이용 request.getParameter를 사용X -->
+	<form action="step5.jsp">
+		<p>이름<input type="text" name="name" required="required"></p>
+		<p>나이<input type="number" name="age" required="required"></p>
+		<p>
+			성별
+			<input type="radio" name="gender" value="m" checked="checked">남자
+			<input type="radio" name="gender" value="f">여자
+		</p>
+		<p>주소<input type="text" name="address" required="required"></p>
+		<p><input type="submit" value="입력"></p>
+	</form>
+</body>
+</html>

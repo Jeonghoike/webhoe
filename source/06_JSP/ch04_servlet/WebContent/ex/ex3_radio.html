@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<style></style>
+	<script>
+		window.onload = function() {
+			document.getElementsByTagName('form')[0].onsubmit = function() {
+				var agreeYes = document.querySelector('input[type="radio"]');
+				// var agreeYes = document.getElementById('agree')[0];
+				if(! agreeYes.checked){
+					alert('동의하셔야 진행 가능합니다');
+					return false;
+				}
+			};
+		};
+	</script>
+</head>
+<body>
+	<fieldset>
+		<legend>약관</legend>
+		Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+	</fieldset>
+	<form action="../Ex2">
+		<p>
+			<input type="radio" name="agree" value="yes">동의합니다<br>
+			<input type="radio" name="agree" value="no">동의하지 않습니다<br>
+		</p>
+		<input type="submit" value="다음">
+	</form>
+</body>
+</html>

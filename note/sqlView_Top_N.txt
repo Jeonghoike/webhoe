@@ -13,12 +13,12 @@ WITH READ ONLY 추가 : 읽기 전용 뷰
 
 복합뷰 : 2개 이상의 테이블로 구성한 뷰, 1개의 테이블로 가상의 필드를 이용한 뷰, DML문을 제한적으로 사용
 ① 2개 이상의 테이블로 구성한 뷰
-ex. CREATE OR REPLACE VIEW EMPv0
+    ex. CREATE OR REPLACE VIEW EMPv0
    	 AS SELECT EMPNO, ENAME, JOB, DNAME 
 		FROM EMP E, DEPT D WHERE E.DEPTNO=D.DEPTNO;
 
 ② 1개의 테이블로 가상의 필드를 이용한 뷰(컬럼에 별칭을 사용)
-ex. CREATE OR REPLACE VIEW EMPv0 (DEPTNO, AVG)
+    ex. CREATE OR REPLACE VIEW EMPv0 (DEPTNO, AVG)
     	AS SELECT DEPTNO, ROUND(AVG(SAL)) FROM EMP GROUP BY DEPTNO;
 
 INLINE-VIEW : FROM절의 서브쿼리를 INLINE VIEW라 하며, FROM절에 오는 서브쿼리는 VIEW처럼 작용

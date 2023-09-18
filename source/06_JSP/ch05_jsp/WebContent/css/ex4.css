@@ -1,0 +1,6 @@
+@charset "UTF-8";
+#wrap {width:400px; margin: 30px auto; text-align: center}
+#wrap h2 {color:red;}
+button {width:120px; padding:20px; border:1px solid #1a1a8e; outline:none; 
+			background-color: #cfd3ee;
+}
