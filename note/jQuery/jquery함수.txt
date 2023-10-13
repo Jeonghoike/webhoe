@@ -1,0 +1,10 @@
+jQuery 기본 문법
+$('선택자').함수();
+  1) html()  해당 선택자 안에 html코드 삽입, 가져오기
+  2) text()   해당 선택자 안에 text 삽입, 가져오기
+  3) css('css속성;값')
+  4) hide()
+  14) 이벤트 관련 함수들
+     click(콜백함수), focus(콜백함수), etc...
+     off(), trigger()..
+  15) aJax관련 함수들 : $.get(), $.post(), $.ajax()

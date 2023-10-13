@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+	<script>
+		$(document).ready(function(){
+			$.ajax({
+				url :'ex.json',
+				dataType : ' json',
+				success : function(jsonData) {
+					$('table#dataShow').html('<tr><th>ID</th><th>name</th><th>price</th><th>desc</th></tr>');
+					$.each(jsonData, function(idx, item){
+						let out = '<tr>';
+						out += '<td>' + item.id + '</td>';
+						out += '<td>' + item.name + '</td>';
+						out += '<td>' + item.price + '</td>';
+						out += '<td>' + item.description + '</td>';
+						out += '</tr>';
+						// $('table#dataShow').html('table#dataShow').html() + out;
+						$('table#dataShow').append(out);
+					});
+				}
+			});
+		});
+	</script>
+</head>
+<body>
+	<table id="dataShow"></table>
+</body>
+</html>

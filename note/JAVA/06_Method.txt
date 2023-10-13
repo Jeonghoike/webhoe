@@ -1,0 +1,60 @@
+
+메소드는 작업을 수행하기 위한 명령문의 집합
+어떤 값을 입력받아서 처리하고 그 결과를 돌려준다.
+입력 받는 값이 없을 수도 있고 결과를 돌려주지 않을 수도 있다.
+반복적으로 수행되는 여러 문장을 메소드로 작성한다
+
+ 메소드 문법 : 접근 제한자 [static(생략가능)] 리턴type 메소드명(ex.sum)([매개변수,1 매개변수2])
+	       return이 없을 경우 리터type은 void
+	       처리할 프로세스들
+	       static이 없을땐 변수를 넣어줘야함 
+
+1) 매개변수를 갖지 않는 메소드
+public class method1 {
+	public static void main(String args[]) {
+		printCh();
+		System.out.println("Hello, Java");
+		printCh();
+		System.out.println("Hello, Java");
+		printCh();
+		System.out.println("Hello, Java");
+		printCh();
+	}
+	pravate static void printCh(){
+		for(int cnt=1 ; cnt<=20 ; cnt++)
+			System.out.print('*');
+		System.out.println();
+	}
+}
+
+2) 매개변수
+public class method1 {
+	public static void main(String args[]) {
+		printCh('■',15);
+		System.out.println("Hello, Java");
+		printCh('*',12);
+		System.out.println("Hello, Java");
+		printCh('*',12);
+		System.out.println("Hello, Java");
+		printCh('■',15);
+	}
+	static void printCh(char ch, int i){
+		for(int cnt=1 ; cnt<=i ; cnt++)
+			System.out.print(ch);
+		System.out.println();
+	}
+}
+
+3) Return값을 갖는 함수
+public class method1 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int input = sc.nextInt();
+		int inputAbs = abs(input);
+		System.out.printf("입력하신수 %d의 절대값은 %d", input, inputAbs);
+	}
+	static int abs(int in){
+		int result = (in<0)? -in : in;
+		return result;
+	}
+}

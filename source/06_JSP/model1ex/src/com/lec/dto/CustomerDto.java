@@ -1,6 +1,7 @@
 package com.lec.dto;
 
 import java.sql.Date;
+import java.sql.Timestamp;
 
 public class CustomerDto {
 	private String cid;
@@ -11,10 +12,10 @@ public class CustomerDto {
 	private String caddress;
 	private Date cbirth;
 	private String cgender;
-	private Date crdate;
+	private Timestamp crdate;
 	public CustomerDto() { }
 	public CustomerDto(String cid, String cpw, String cname, String ctel, String cemail, String caddress, Date cbirth,
-			String cgender, Date crdate) {
+			String cgender, Timestamp crdate) {
 		this.cid = cid;
 		this.cpw = cpw;
 		this.cname = cname;
@@ -73,10 +74,10 @@ public class CustomerDto {
 	public void setCgender(String cgender) {
 		this.cgender = cgender;
 	}
-	public Date getCrdate() {
+	public Timestamp getCrdate() {
 		return crdate;
 	}
-	public void setCrdate(Date crdate) {
+	public void setCrdate(Timestamp crdate) {
 		this.crdate = crdate;
 	}
 	@Override

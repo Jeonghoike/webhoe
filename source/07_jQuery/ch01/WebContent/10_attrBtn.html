@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('img').mousedown(function(){
+				$(this).attr('src', 'img/but2.gif').attr('alt', '마우스 눌렀을 때');
+				//$(this).attr('src', 'img/but2.gif');
+				//$(this).attr('alt', '마우스 눌렀을 때');
+			});
+			$('img').mouseup(function(){
+				$(this).attr('src', 'img/but1.gif').attr('alt', '마우스 up');
+			});
+		});
+	</script>
+</head>
+<body>
+	<img src="img/but1.gif" alt="클릭전">
+	<img src="img/but1.gif" alt="클릭전">
+	<img src="img/but1.gif" alt="클릭전">
+	<img src="img/but1.gif" alt="클릭전">
+</body>
+</html>

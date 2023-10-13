@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+	<script>
+		$(document).ready(function(){
+			// aJax관련 함수 : $.get(), $.post(), $.ajax()
+			$('button').click(function() {
+				var mid = $('#mid').val();
+				// "midConfirm.jsp?mid="+mid를 요청한 결과 화면을 #midConfirmResult로
+				/* $.get(요청결로, 콜백함수(data, status){ });
+						data : 요청경로 수행한 결과(<b>중복된 ID입니다</b> / 사용 가능한 ID입니다)
+						status : success / fail
+				});*/
+				$.get("midConfirm.jsp?mid="+mid, function(data, status){
+					if(status == 'success'){
+						// alert(data);
+						$('span#midConfirmResult').html(data);
+					}
+				}); // $.get()
+			}); // button의 click이벤트
+			$('#mid').keyup(function() {
+				var mid  = $('#mid').val();
+				if(mid.length < 2){
+					$('span#midConfirmResult').text('id는 2글자 이상입니다');
+				}else{
+					$.get('midConfirm.jsp?mid='+mid, function(data, status){
+						if(status == 'success'){
+							$('#midConfirmResult').html(data);
+						}
+					}); // $.get
+				} // if
+			});
+		});
+	</script>
+</head>
+<body>
+	아이디 <input type="text" name="mid" id="mid"><button>중복체크</button><br>
+	<span id="midConfirmResult"></span>
+</body>
+</html>

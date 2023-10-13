@@ -1,0 +1,6 @@
+getRealPath :  첨부할 파일이 저장될 서버(WAS)의 폴더
+maxSzie = 1024 * 1024 * 10  업로드최대 용량 10M
+new DefaultFileRenamePolicy() : 같은 파일을 첨부할 경우 a.jpg -> a1.jpg -> a2.jpg 폴더명을 바꿈.
+String param = paramNames.nextElement();  param="file"으로
+filename = mRequest.getFilesystemName(param);  파라미터로 서버에 저장된 파일이름 
+originalFilename = mRequest.getOriginalFileName(param);  파라미터에 첨부한 오리지널 파일이름

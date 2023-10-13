@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+	<script>
+		$(document).ready(function(){
+			let h1Cnt=0; // #h1을 click 횟수
+			$('h1#h1').click(function(){
+				h1Cnt ++;
+				if(h1Cnt < 6){
+					$(this).append('<span class="red">♥</span>');
+					// $(this).html($(this).html() + '<span class="red">♥</span>');
+					$(this).prepend('<span class="blue">♡</span>');
+					//$(this).html('<span class="blue">♡</span>'+$(this).html());
+				}else{
+					// 클릭한 횟수가 6회가 되면 click이벤트 제거
+					//$('h1#h1').off();
+					$(this).off();
+				}
+			}); // #h1이벤트 
+			$('h1#h2').click(function(){
+				$('#h2').append('<span class="red">★</span>');
+			});
+			setInterval(() => {
+				$('h1').last().trigger('click'); // 3초마다 강제 이벤트 발생
+			}, 2000);
+		});
+	</script>
+</head>
+<body>
+	<h1 id="h1">좋아요(5회 제안)</h1>
+	<h1 id="h2">좋아요</h1>
+</body>
+</html>

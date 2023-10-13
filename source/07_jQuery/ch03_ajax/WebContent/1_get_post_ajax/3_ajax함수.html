@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('input[name=mid]').keyup(function() {
+				var mid = $(this).val();
+				if(mid.length < 2){
+					$('#midConfirmResult').text('id는 2글자 이상입니다');
+				}else{
+					// $.get(요처url(파라미터 포함), callback);
+					// $.post(요청url(파리미터 미포함), 요청파라미터를 객체화, callback);
+					// $.ajax({.. });
+					$.ajax({
+						// url : 요청경로(★)
+						// type : get/post
+						// data : 요청파라미터명과 값(★) mid = aaa&pageNum=3 / {mid:'aaa', pageNum:3}
+						// dataType : html/json/.. 요청한 경로로 실행 결과의 타입
+						// success : 성공시 수행할 콜백함수(★)
+						// error : 요청경로 실행 실패시 수행할 콜백함수
+						url : 'midConfirm.jsp', 
+						type : 'get',
+						data : 'mid='+mid,
+						// data : {mid : mid},
+						dataType : 'html',
+						success : function(data){
+							$('#midConfirmResult').html(data);
+						},
+						error : function(code){
+							alert(code.status + '/' + code.statusText);
+						},
+					}); // $.ajax
+				} // if - mid길이
+			}); // keyup 이벤트
+		});
+	</script>
+</head>
+<body>
+	아이디 <input type="text" name="mid"><br>
+	<span id="midConfirmResult"></span>
+</body>
+</html>

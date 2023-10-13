@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+	<script>
+		const overImg = ['img/0over.jpg', 'img/1over.jpg', 'img/2over.jpg', 'img/3over.jpg'];
+	 	const outImg = ['img/0out.jpg', 'img/1out.jpg', 'img/2out.jpg', 'img/3out.jpg'];
+	 	const menu = ['turorial', 'example', 'special', 'link'];
+		$(document).ready(function(){
+			$('img').each(function(idx, item){
+				$(this).mouseover(function(){
+					$(this).attr('src', overImg[idx]);
+					$(this).attr('alt', menu[idx]+' 선택');
+				});
+				$(this).mouseout(function(){
+					$(this).attr('src', outImg[idx]);
+					$(this).attr('alt', menu[idx]+' 선택 해제');
+				});
+			});
+		});
+	</script>
+</head>
+<body>
+	<img src="img/0out.jpg" alt="tutorial 선택해제"><!-- img/0over.jpg -->
+	<img src="img/1out.jpg" alt="example 선택해제"><!-- img/1over.jpg -->
+	<img src="img/2out.jpg" alt="special 선택해제"><!-- img/2over.jpg -->
+	<img src="img/3out.jpg" alt="link 선택해제"><!-- img/3over.jpg -->
+</body>
+</html>
