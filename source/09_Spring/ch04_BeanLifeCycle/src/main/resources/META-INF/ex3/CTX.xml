@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="friend" class="com.lec.ch04.ex3_scope.Friend"><!--  scope="singleton" 기본값 -->
+		<property name="friendNo" value="1"/>
+		<property name="name" value="홍길동"/>
+		<property name="tel" value="010-9999-9999"/>
+	</bean>
+	<bean id="friendProto" class="com.lec.ch04.ex3_scope.Friend" scope="prototype">
+		<property name="friendNo" value="2"/>
+		<property name="name" value="신길동"/>
+		<property name="tel" value="010-8888-8888"/>
+	</bean>
+</beans>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

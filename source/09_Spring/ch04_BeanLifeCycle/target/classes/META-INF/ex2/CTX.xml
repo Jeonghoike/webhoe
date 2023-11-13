@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd">
+	
+	<context:annotation-config/>
+	
+	<bean id="person" class="com.lec.ch04.ex2_life.Person">
+		<constructor-arg value="홍길동"/>
+		<constructor-arg value="010-9999-9999"/>
+	</bean>
+	
+	<bean id="oPerson" class="com.lec.ch04.ex2_life.OtherPerson">
+		<property name="name" value="홍길숙"/>
+		<property name="tel" value="010-8888-8888"/>
+	</bean>
+</beans>
+
+
+
+
+
+
+
+
+
+
+

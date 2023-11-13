@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<!-- Student student1 = new Student("홍길동",22, "3학년","computer"); -->
+	<bean id="student1" class="com.lec.ch02.ex3_student.Student">
+		<constructor-arg>
+			<value>홍길동</value>
+		</constructor-arg>
+		<constructor-arg>
+			<value>22</value>
+		</constructor-arg>
+		<constructor-arg>
+			<value>3학년</value>
+		</constructor-arg>
+		<constructor-arg>
+			<value>computer</value>
+		</constructor-arg>
+	</bean>
+	<bean name="student2" class="com.lec.ch02.ex3_student.Student">
+		<constructor-arg value="홍길순"/>
+		<constructor-arg value="24"/>
+		<constructor-arg value="6학년"/>
+		<constructor-arg value="피부과분반"/>
+	</bean>
+	<!--StudentPrint  studentPrint = new StudentPrint(student1); -->
+	<bean id="studentPrint" class="com.lec.ch02.ex3_student.StudentPrint">
+		<constructor-arg ref="student1"/>
+		<!-- <constructor-arg>
+			<ref bean="student1"/>
+		</constructor-arg> -->
+	</bean>
+</beans>
+
+
+
+
+
+
+
+
+
+
+
+
+

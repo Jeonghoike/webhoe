@@ -1,0 +1,36 @@
+처음 JSP&Servlet을 이용할 때는 많은 코드양으로 DB에 접근하다가, Spring에서는 JDBC Template을 이용해서 
+코드양을 많이 줄일 수 있었다. Mybatis를 이용하면 코드를 더 줄일 수 있고, 자바 코드가 아닌 xml 파일로 DB에
+엑세스한다. MyBatis는 DB접근을 자바가 아닌 xml로 대체하도록 하는 라이브러리이다. SQL 코드를 자바코드와 분리시키는데 목적이 있다.
+
+진행순서
+- pom.xml:필요라이브러리 의존추가 (lombok, JDBCTemplate, mybatis, mybatis-Spring등) 
+- web.xml :한글처리. *.do
+- db.properties : DB환경설정정보
+- root-context.xml에 dataSource 빈생성
+- DTO
+- xml 생성 :mapper(empList,deptList) + config (mybatis.org)
+- root-context.xml에 SqlSessionfactoryBean, sessionTemplate(SqlSessionTemplate) 빈생성
+- 실행 첫화면 : css 추가해서 테스트
+- DAO
+- Service
+- Controller
+- emp.jsp
+
+mapper안에 id는 유일해야함
+
+
+XML mapper에 sql문  <(꺽세괄호) 집어 넣을 때 <![CDATA[       ]]> 안에 넣어서 
+<mapper namespace="Dept">
+	<resultMap type="Dept" id="DeptResult">
+		<result property="deptno" column="deptno"/>
+		<result property="dname" column="dname"/>
+		<result property="loc" column="loc"/>
+	</resultMap>
+	<select id="deptList" resultMap="DeptResult">
+		<![CDATA[
+			SELECT * FROM DEPT		
+		]]>
+	</select>
+</mapper>
+
+디파지토리 패키지 이름을 xml에 namespace에 입력

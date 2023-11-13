@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<!-- Vehicle vh = new Bicycle(); -->
+	<!-- <bean id="vh" class="com.lec.ch02.ex4_vehicle.Bicycle"/> -->
+	<!-- <bean id="vh" class="com.lec.ch02.ex4_vehicle.Airplane"/> -->
+	<bean id="vh" class="com.lec.ch02.ex4_vehicle.VehicleImpl">
+		<property name="vehicle" value="미사일"/>
+		<property name="speed" value="800"/>
+	</bean>
+</beans>

@@ -1,0 +1,19 @@
+1.Environment 객체를 이용
+(1) Context 객체를 얻는다.
+	ConfigurableApplicationContext ctx = new GenericXmlApplicationContext();
+
+(2) Context 객체로부터 ctx.getEnvironment()를 하여 Environment 객체를 얻는다. 
+	ConfigurableEnvironment env = ctx.getEnvironment();
+
+(3) Environment객체안에는 여러 가지 환경설정을 위한 정보들이 있다. 
+	이런 값들을 관리하기 위해 이런 정보들이 바로 들어있지 않고 PropertySource라고 하는 객체가 있고, PropertySource안에 정보가 있다.
+	Environment 객체로부터 env.getPropertySources()를 하여 데이터를 관리해 주는 PropertySources 객체를 얻는다.
+	MutablePropertySources propertySources = env.getPropertySources();
+
+(4) 추가 : propertySources.addLast()
+	propertySources.addLast(new ResourcePropertySource("classpath:admin.properties"));
+	// 외부 설정을 ResourcePropertySource 로 만들고 그것을 propertySource에 추가
+	// 내가 만든 설정 환경설정이 따라 붙게 추가한 것
+
+(5) 추출 : env.getProperty() 내가 필요한 정보가 있을 때까지 계속 검색하고 있으면 정보값을 리턴.
+	System.out.println(env.getProperty("admin.id"));

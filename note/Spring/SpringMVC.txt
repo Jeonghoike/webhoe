@@ -1,0 +1,14 @@
+
+
+컨트롤러 안에 RequestMapping 
+
+System.out.println(); 콘솔창에 뿌릴 때 
+
+logger.info(); 
+logger.warn();
+logger.error();
+
+web.xml에 오류가 나면 프로그램 실행이
+ 안됨
+
+servlet-context.xml에 resources추가해서 img, css, js등 파일 사용

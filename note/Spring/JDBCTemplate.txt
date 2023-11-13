@@ -1,0 +1,13 @@
+JDBC template를 이용한 반복코드 줄이기때문에 JDBC를 이용하는 가장 큰 이유이다
+Dao객체를 이용해서 database의 데이터를 이용한다. 이때 매번 같은 동작을 반복하는 부분이 있다.
+이런 반복적인 작업을 스프링에서는 간단히 처리
+JDBC 드라이버로드 – DriverManager, 데이터 베이스 연결 - Connection, SQL문 실행– PreparedStatement, ResultSet,
+DB연결 해제 - *.close() 모두 JdbcTemplate에서 한번에 해결
+
+
+
+대체로 웹과관련된 빈은 servlet-context.xml
+	아닌것은(db관련된 빈) root-context.xml
+
+jdbctemplate 
+
