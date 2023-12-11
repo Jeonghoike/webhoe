@@ -1,0 +1,18 @@
+footer{
+    width:600px; margin: 5px auto 0;
+    height: 70px;
+    overflow: hidden;
+}
+footer div:nth-child(1),
+footer div:nth-child(2),
+footer div:nth-child(3){
+    float: left; width:33.33%; height: 30px;
+    border: 1px solid gray;
+    box-sizing: border-box;
+}
+footer div:last-child{
+    clear:both;
+    height: 30px; line-height: 30px; text-align: center;
+    background-color: black;
+    color:white;
+}

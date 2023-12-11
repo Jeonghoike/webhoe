@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="/css/style.css" rel="stylesheet" type="text/css">
+    <script th:inline="javascript">
+        let friend = [[${friend}]];
+        if(friend){
+            alert(friend.name + ' 친구 등록 완료');
+        }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script>
+        $(document).ready(function (){
+            $('tr').click(function (){
+               let id = Number($(this).children().eq(0).text().trim());
+               if (!isNaN(id)){
+                   location.href = '/friend/findOne?id='+id;
+               }
+            });
+        });
+    </script>
+</head>
+<body>
+    <!-- [[${friend}]]-->
+    <th:block th:replace="fragments/header::headerFragment"/>
+    <table>
+        <tr>
+            <td colspan="3">
+                <a href="/friend/join"><b>친구등록</b></a> &nbsp; &nbsp;
+                <a href="/">처음으로</a>
+            </td>
+        </tr>
+        <tr><th>아이디</th><th>이름</th><th>전화</th></tr>
+        <tr th:if="${friends eq null or friends.size() eq 0}">
+            <td colspan="3">
+                <b>등록된 친구가 없습니다</b>
+            </td>
+        </tr>
+        <tr th:each="friend:${friends}">
+            <td th:text="${friend.id}">#id</td>
+            <td th:text="${friend.name}">#name</td>
+            <td>[[${friend.tel}]]</td>
+            <!-- <td th:text="${friend.tel}">#tel</td>-->
+        </tr>
+        <tr th:unless="${friends.size() == 0}">
+            <td colspan="3" th:text="'이상 &nbsp; ' + ${friends.size()} + '명'">xx명</td>
+        </tr>
+    </table>
+    <th:block th:replace="fragments/footer::footerFragment"/>
+</body>
+</html>

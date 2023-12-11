@@ -1,0 +1,49 @@
+mail.host=stmp.gmail.com : 웹에 메일 보내는 서버에 url
+
+gmail 계정을 이용 보안수준 2단계로 설정하고 앱 비밀번호를 생성한다
+앱 비밀번호 생성시 github에 올릴경우 비밀번호를 지우거나 gitignore사용해서 외부노출위험방지
+
+설정(상단우측) -> 모든설정 -> 전달 및 POP/IMAP 클릭 -> 모든메일에 POP사용하기 클릭 ->
+		상태: IMAP사용 클릭 -> 변경사항 저장 
+
+1. 의존추가 (pom.xml)
+<!-- https://mvnrepository.com/artifact/javax.mail/mail --> mvn mailSender
+	<dependency>
+	    <groupId>javax.mail</groupId>
+	    <artifactId>mail</artifactId>
+	    <version>1.4.7</version>
+	</dependency>
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-context-support</artifactId>
+	    <version>3.0.5.RELEASE</version>
+	</dependency>
+
+2. web.xml 한글 filter 추가
+
+3. 메일정보 
+mail.host=smtp.gmail.com
+mail.port=587
+mail.username=comlec0703@gmail.com
+mail.passwoard=ojbqhcdttrrtyiaq
+
+4. 빈생성
+<context:property-placeholder location="classpath:META-INF/property/mail.properties"/>
+	
+	<beans:bean id="mailSender"
+		class="org.springframework.mail.javamail.JavaMailSenderImpl">
+		<beans:property name="host" value="${mail.host}"/>
+		<beans:property name="port" value="${mail.port}"/>
+		<beans:property name="username" value="${mail.username}"/>
+		<beans:property name="password" value="${mail.passwoard}"/>
+		<beans:property name="javaMailProperties">
+			<beans:props>
+				<beans:prop key="mail.smtp.auth">true</beans:prop>
+				<beans:prop key="mail.smtp.starttls.enable">true</beans:prop>
+				<beans:prop key="mail.debug">true</beans:prop>
+				<beans:prop key="mail.transport.protocol">smtp</beans:prop>
+				<beans:prop key="mail.smtp.ssl.trust">smtp.gmail.com</beans:prop>
+				<beans:prop key="mail.smtp.ssl.protocols">TLSv1.2</beans:prop>
+			</beans:props>
+		</beans:property>
+	</beans:bean>
