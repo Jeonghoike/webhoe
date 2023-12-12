@@ -9,6 +9,10 @@
         if(friend){
             alert(friend.name + ' 친구 등록 완료');
         }
+        let deleteResult = [[${deleteResult}]];
+        if(deleteResult === 1){
+            alert([[${param.id}]] + '번 친구 삭제');
+        }
     </script>
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <script>
@@ -27,14 +31,14 @@
     <th:block th:replace="fragments/header::headerFragment"/>
     <table>
         <tr>
-            <td colspan="3">
+            <td colspan="4">
                 <a href="/friend/join"><b>친구등록</b></a> &nbsp; &nbsp;
                 <a href="/">처음으로</a>
             </td>
         </tr>
-        <tr><th>아이디</th><th>이름</th><th>전화</th></tr>
+        <tr><th>아이디</th><th>이름</th><th>전화</th><th></th></tr>
         <tr th:if="${friends eq null or friends.size() eq 0}">
-            <td colspan="3">
+            <td colspan="4">
                 <b>등록된 친구가 없습니다</b>
             </td>
         </tr>
@@ -42,10 +46,10 @@
             <td th:text="${friend.id}">#id</td>
             <td th:text="${friend.name}">#name</td>
             <td>[[${friend.tel}]]</td>
-            <!-- <td th:text="${friend.tel}">#tel</td>-->
+            <td><a th:href="@{/friend/deleteOne(id=${friend.id})}">삭제</a></td>
         </tr>
         <tr th:unless="${friends.size() == 0}">
-            <td colspan="3" th:text="'이상 &nbsp; ' + ${friends.size()} + '명'">xx명</td>
+            <td colspan="4" th:text="'이상 &nbsp; ' + ${friends.size()} + '명'">xx명</td>
         </tr>
     </table>
     <th:block th:replace="fragments/footer::footerFragment"/>
